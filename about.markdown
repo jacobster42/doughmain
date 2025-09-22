@@ -3,16 +3,27 @@ layout: page
 title: About
 permalink: /about/
 ---
-<!-- 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+## Hi, I'm Jacob 👋
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I'm a Senior Data Analyst who discovered that the same analytical mindset that helps me debug code also makes me a better baker. What started as a sourdough class at King Arthur has evolved into a passion for understanding the science behind great bread.
 
+### Why Dough Main Logic?
 
-[jekyll-organization]: https://github.com/jekyll -->
+As a developer, I'm used to systematic approaches, testing, and iterating until something works perfectly. I apply these same principles to baking:
+
+- **Precise measurements** (because flour ratios matter as much as code syntax)
+- **Systematic troubleshooting** (dense bread has causes, just like bugs)
+- **Tool evaluation** (I test baking equipment like I evaluate raw datasets)
+- **Process optimization** (making great bread efficiently)
+
+### What You'll Find Here
+
+- **Foolproof recipes** with baker's percentages and timing guides
+- **Honest tool reviews** of mixers, scales, proofing baskets, and more
+- **Troubleshooting guides** for common bread problems
+- **Technique tutorials** methods refined through countless batches
+
+### My Approach
+
+I believe great dough comes from understanding the fundamentals, having reliable tools, and following proven processes. No mystical intuition required - just good technique and the right equipment.
