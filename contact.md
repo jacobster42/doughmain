@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact
+title: ""
 permalink: /contact/
 ---
 
@@ -28,13 +28,12 @@ Have a question about a recipe, need help troubleshooting your bread, or want to
       <option value="tool-suggestion">Tool Review Request</option>
       <option value="troubleshooting">Troubleshooting Help</option>
     </select>
-  </div>
-
-  <div class="form-group urgent-checkbox">
-    <label for="urgent" class="urgent-label">
-      <input type="checkbox" id="urgent" name="urgent" value="yes" onchange="updateSubject()" class="urgent-input">
-      <span class="urgent-text">🚨 Mark as URGENT (dough currently misbehaving!)</span>
-    </label>
+    <div class="urgent-checkbox">
+      <label for="urgent" class="urgent-label">
+        <input type="checkbox" id="urgent" name="urgent" value="yes" onchange="updateSubject()" class="urgent-input">
+        <span class="urgent-text">🚨 Mark as urgent (dough emergency!)</span>
+      </label>
+    </div>
   </div>
 
   <div class="form-group">
@@ -46,7 +45,7 @@ Have a question about a recipe, need help troubleshooting your bread, or want to
   <input type="text" name="_gotcha" style="display:none">
 
   <!-- Hidden field to set the subject line in emails -->
-  <input type="hidden" id="subject-field" name="_subject" value="New contact form submission from Dough Main Logic">
+  <input type="hidden" id="subject-field" name="_subject" value="New contact form submission from Doughmain Logic">
 
   <!-- Prevent redirect - return JSON response instead -->
   <input type="hidden" name="_format" value="json">
@@ -55,7 +54,7 @@ Have a question about a recipe, need help troubleshooting your bread, or want to
     function updateSubject() {
       const urgentCheckbox = document.getElementById('urgent');
       const subjectField = document.getElementById('subject-field');
-      const baseSubject = 'New contact form submission from Dough Main Logic';
+      const baseSubject = 'New contact form submission from Doughmain Logic';
 
       if (urgentCheckbox.checked) {
         subjectField.value = 'URGENT - ' + baseSubject;
@@ -88,7 +87,7 @@ Have a question about a recipe, need help troubleshooting your bread, or want to
             // Success - show popup and clear form
             showThankYouPopup();
             form.reset();
-            document.getElementById('subject-field').value = 'New contact form submission from Dough Main Logic';
+            document.getElementById('subject-field').value = 'New contact form submission from Doughmain Logic';
           } else {
             throw new Error('Form submission failed');
           }

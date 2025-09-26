@@ -8,7 +8,7 @@ permalink: /about/
 
 I'm a Senior Data Analyst who discovered that the same analytical mindset that helps me debug code also makes me a better baker. What started as a sourdough class at King Arthur has evolved into a passion for understanding the science behind great bread.
 
-### Why Dough Main Logic?
+### Why Doughmain Logic?
 
 As a developer, I'm used to systematic approaches, testing, and iterating until something works perfectly. I apply these same principles to baking:
 

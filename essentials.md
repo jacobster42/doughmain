@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Recommended Tools
-permalink: /tools/
+title: Essentials
+permalink: /essentials/
 ---
 
 # Essential Baking Tools & Equipment
