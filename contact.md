@@ -44,6 +44,12 @@ Have a question about a recipe, need help troubleshooting your bread, or want to
   <!-- Formspree honeypot field for spam protection -->
   <input type="text" name="_gotcha" style="display:none">
 
+  <!-- Additional spam protection -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Rate limiting field -->
+  <input type="hidden" name="_template" value="box">
+
   <!-- Hidden field to set the subject line in emails -->
   <input type="hidden" id="subject-field" name="_subject" value="New contact form submission from Doughmain Logic">
 
