@@ -92,6 +92,57 @@ body {
   }
 }
 
+// Blog widget styling
+.blog-widget {
+  margin: 2rem 0;
+}
+
+.upcoming-post {
+  background: $yeast-warm;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid $wheat-tan;
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.08);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.15);
+    border-color: $golden-crust;
+  }
+
+  h3 {
+    color: $crust-brown;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $olive-oil;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-link {
+    display: inline-block;
+    background: $crust-brown;
+    color: $flour-white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: darken($crust-brown, 10%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+    }
+  }
+}
+
 // Feature grid
 .feature-grid {
   display: grid;
@@ -144,65 +195,124 @@ body {
 .site-footer {
   background-color: $crust-brown;
   color: $flour-white;
-  border-top: 2px solid $golden-crust;
-  padding: 0.75rem 0;
+  border-top: 3px solid $golden-crust;
 
-  .footer-content {
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 1rem 2rem;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+
+    .footer-info {
+      .footer-site-title {
+        color: $flour-white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .footer-contact {
+        color: $sourdough-cream;
+        font-size: 0.9rem;
+        margin: 0 0 0.25rem 0;
+
+        a {
+          color: $golden-crust;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .footer-location {
+        color: $sourdough-cream;
+        font-size: 0.9rem;
+        margin: 0;
+        font-style: italic;
+      }
+    }
+
+    .footer-social {
+      .social-icon {
+        background: #E60023; // Pinterest brand red background
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(230, 0, 35, 0.2);
+
+        &:hover {
+          background: #AD081B;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(230, 0, 35, 0.4);
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(245, 245, 220, 0.2); // Subtle divider
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 1rem 2rem;
 
     @media (max-width: 768px) {
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 1rem;
       text-align: center;
-    }
-  }
-
-  .footer-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    .footer-site-name {
-      color: $flour-white;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin: 0;
+      padding: 1rem;
     }
 
-    .footer-copyright {
-      color: $sourdough-cream;
-      font-size: 0.75rem;
-      margin: 0;
-    }
-  }
-
-  .footer-links {
-    .footer-nav-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    .footer-nav {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
 
       @media (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
       }
 
-      .footer-link {
+      .footer-nav-link {
         color: $flour-white;
         text-decoration: none;
-        font-size: 0.75rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
         transition: color 0.3s ease;
 
         &:hover {
           color: $golden-crust;
         }
       }
+    }
+
+    .footer-copyright {
+      color: $sourdough-cream;
+      font-size: 0.8rem;
     }
   }
 }
@@ -387,20 +497,17 @@ body {
 
 // Site-wide margin improvements
 .wrapper {
-  max-width: 1200px !important;
+  max-width: 800px !important;
   margin: 0 auto;
   padding: 0 2rem;
 
-  @media (min-width: 1600px) {
-    max-width: 1400px !important;
-    padding: 0 3rem;
-  }
-
-  @media (min-width: 1200px) and (max-width: 1599px) {
-    padding: 0 2.5rem;
+  @media (min-width: 1200px) {
+    max-width: 900px !important;
+    padding: 0 2rem;
   }
 
   @media (min-width: 768px) and (max-width: 1199px) {
+    max-width: 750px !important;
     padding: 0 2rem;
   }
 
@@ -409,16 +516,36 @@ body {
   }
 }
 
-// Page content wrapper
-.page-content {
-  padding: 2rem 0;
+// Ensure consistent margins for all page types
+.page-content, .post, .home {
+  max-width: 100%;
+  margin: 0 auto;
+
+  // Standard top/bottom spacing for all pages
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  // Ensure consistent text spacing
+  p, ul, ol, blockquote {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Standard heading spacing
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
-// Main content area
-.post, .home {
-  margin: 0;
-  max-width: none;
-}
+// Override duplicate styles - main content areas handled above
 
 // Tablet-specific optimizations
 @media (min-width: 769px) and (max-width: 1024px) {
