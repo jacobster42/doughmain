@@ -1,0 +1,294 @@
+categories:
+  kitchen_scales:
+    title: "Kitchen Scale - Digital Precision"
+    description: "Baking is chemistry. Volume measurements vary; weight doesn't."
+    products:
+      - name: "Ozeri ZK12-R Pronto Digital Kitchen Scale"
+        asin: "B01H5ZRRJE"
+        price: "~$15"
+        specs:
+          - "Capacity: 12 lbs (perfect for large batches)"
+          - "Precision: 0.05 oz accuracy"
+          - "Features: Ultra-thin design, large platform, automatic shut-off"
+          - "Price: ~$15"
+        personal_favorite: true
+        personal_experience: "I use this exact model daily"
+
+      - name: "Etekcity Digital Kitchen Scale"
+        asin: "B0113UZJE2"
+        price: "~$15"
+        specs:
+          - "Great starter scale under $15"
+          - "11 lb capacity, 0.1 oz precision"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  stand_mixers:
+    title: "Stand Mixer - The Workhorse"
+    description: "Consistent kneading, handles heavy doughs, frees your hands."
+    products:
+      - name: "KitchenAid Artisan 5-Qt Stand Mixer"
+        asin: "B00005UP2P"
+        price: "~$300-400"
+        specs:
+          - "Motor: 325-watt (handles most bread doughs)"
+          - "Capacity: 5 quarts (2 large loaves)"
+          - "Attachments: Includes dough hook, whisk, paddle"
+          - "Durability: Built to last decades"
+          - "Price: ~$300-400"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+      - name: "KitchenAid Professional 6-Qt"
+        asin: "B00063ULMI"
+        price: "~$400-500"
+        specs:
+          - "575-watt motor for frequent baking"
+          - "6-quart capacity for large families"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  bench_scrapers:
+    title: "Bench Scraper - The Unsung Hero"
+    description: "Dough handling, portioning, cleaning - does everything."
+    products:
+      - name: "Amazon Basics Multi-Purpose Stainless Steel Scraper/Chopper"
+        asin: "B07255T6SW"
+        price: "~$8"
+        specs:
+          - "Material: Stainless steel with contoured grip handle"
+          - "Size: 6-inch blade perfect for most tasks"
+          - "Features: Rounded corners, ergonomic black handle, built-in ruler"
+          - "Uses: Cutting dough, chopping vegetables, scraping surfaces"
+          - "Price: ~$8"
+        personal_favorite: true
+        personal_experience: "Built-in ruler is helpful when making pretzel bites"
+
+  thermometers:
+    title: "Instant-Read Thermometer"
+    description: "Know when bread is truly done, verify water temperature."
+    products:
+      - name: "Thermapen ONE"
+        asin: "B077LBQZPX"
+        price: "~$100"
+        specs:
+          - "Speed: 1-second readings"
+          - "Accuracy: ±0.5°F"
+          - "Range: -58°F to 572°F"
+          - "Waterproof: IPX7 rated"
+          - "Price: ~$100 (worth every penny)"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+      - name: "ThermoPro TP03 - Budget Pick"
+        asin: "B01IHHLB3W"
+        price: "Under $15"
+        specs:
+          - "3-4 second readings"
+          - "±1.8°F accuracy"
+          - "Under $15"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  oven_thermometers:
+    title: "Oven Thermometer"
+    description: "Most ovens are off by 25-50°F. Know your real temperature."
+    products:
+      - name: "Taylor Classic Oven Thermometer"
+        asin: "B00004XSC7"
+        price: "Under $10"
+        specs:
+          - "Large, easy-to-read dial"
+          - "Hangs on oven rack"
+          - "±25°F accuracy"
+          - "Under $10"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  loaf_pans:
+    title: "Loaf Pans - Quality Matters"
+    description: "Even heating, easy release, perfect size."
+    products:
+      - name: "USA Pan 1 lb Loaf Pan (Set of 2)"
+        asin: "B0029JQEIC"
+        price: "~$25 for set"
+        specs:
+          - "Material: Aluminized steel with nonstick coating"
+          - "Size: 8.5\" x 4.5\" (standard 1 lb loaf)"
+          - "Features: Even browning, easy release"
+          - "Made in USA"
+          - "Price: ~$25 for set"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+      - name: "Lodge Cast Iron Loaf Pan"
+        asin: "B00006JSUB"
+        price: "~$35"
+        specs:
+          - "Superior heat retention"
+          - "Creates incredible crust"
+          - "Lasts forever"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  dutch_ovens:
+    title: "Dutch Oven - Artisan Bread Secret"
+    description: "Creates professional steam environment for crusty bread."
+    products:
+      - name: "Lodge 5-Quart Dutch Oven"
+        asin: "B000N501BK"
+        price: "~$60"
+        specs:
+          - "Material: Pre-seasoned cast iron"
+          - "Size: Perfect for 1-2 lb loaves"
+          - "Versatility: Bread, soups, roasts"
+          - "Price: ~$60"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+      - name: "Le Creuset 5.5-Qt Dutch Oven"
+        asin: "B00005QFSP"
+        price: "~$300+"
+        specs:
+          - "No seasoning required"
+          - "Beautiful colors"
+          - "Premium price point"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  proofing_baskets:
+    title: "Proofing Baskets (Bannetons)"
+    description: "Support for final rise, beautiful spiral pattern."
+    products:
+      - name: "WERTIOO Banneton Set"
+        asin: "B078TBQZPX"
+        price: "~$25 for complete set"
+        specs:
+          - "Includes: 9\" round, 10\" oval baskets"
+          - "Material: Natural rattan"
+          - "Accessories: Liners, scraper, lame"
+          - "Price: ~$25 for complete set"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  bread_lames:
+    title: "Bread Lame - Scoring Made Simple"
+    description: "Clean, controlled cuts for oven spring."
+    products:
+      - name: "Emile Henry Bread Lame"
+        asin: "B07L5QQ7N8"
+        price: "~$20"
+        specs:
+          - "Replaceable razor blades"
+          - "Comfortable ceramic handle"
+          - "~$20"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+      - name: "Double-Edge Razor Blades - DIY Alternative"
+        asin: "B004L4EING"
+        price: "Under $10"
+        specs:
+          - "Professional bakers' choice"
+          - "Snap in half for curved cuts"
+          - "Under $10 for 100 blades"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  dough_whisks:
+    title: "Dough Whisk - Better Than Spoons"
+    description: "Cuts through flour without overworking."
+    products:
+      - name: "Norpro Danish Dough Whisk"
+        asin: "B000CPOJ0S"
+        price: "~$15"
+        specs:
+          - "Traditional design"
+          - "Beechwood handle"
+          - "~$15"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  pretzel_essentials:
+    title: "Pretzel-Making Essentials"
+    description: "For the pretzel enthusiasts:"
+    products:
+      - name: "Coarse Pretzel Salt"
+        asin: "B000H25HYY"
+        price: "~$8"
+        specs:
+          - "Authentic coarse grain"
+          - "Essential for proper pretzel flavor"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+      - name: "Everything But The Bagel Seasoning"
+        asin: "B078JBQZPX"
+        price: "~$6"
+        specs:
+          - "Perfect for everything pretzels"
+          - "Sesame seeds, poppy seeds, garlic, onion, salt"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+      - name: "Arm & Hammer Pure Baking Soda"
+        asin: "B000PYF8VM"
+        price: "~$3"
+        specs:
+          - "Food-grade lye alternative"
+          - "Safe for home use"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  pizza_steel:
+    title: "Pizza Steel - Better Than Stone"
+    description: "Faster heat transfer, doesn't crack."
+    products:
+      - name: "Dough-Joe Pizza Steel"
+        asin: "B073W61MK1"
+        price: "~$80"
+        specs:
+          - "Thickness: 1/4\" steel plate"
+          - "Size: 16\" x 14\""
+          - "Versatility: Pizza, bread, cookies"
+          - "Price: ~$80"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+  essential_reading:
+    title: "Essential Reading"
+    description: "Knowledge is power."
+    products:
+      - name: "The New Artisan Bread in Five Minutes a Day"
+        asin: "1250018285"
+        price: "~$18"
+        specs:
+          - "Topic: Master artisan bread techniques"
+          - "Features: Clear instructions, great photos"
+          - "Best for: Home bakers just starting out with little to no equipment"
+        personal_favorite: true
+        personal_experience: "This was my very first bread book and I still use it over 10 years later"
+    
+      - name: "Flour Water Salt Yeast by Ken Forkish"
+        asin: "160774273X"
+        price: "~$20"
+        specs:
+          - "Topic: Master artisan bread techniques"
+          - "Features: Clear instructions, great photos"
+          - "Best for: Home bakers wanting professional results"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+      - name: "The Food Lab by J. Kenji López-Alt"
+        asin: "0393081087"
+        price: "~$25"
+        specs:
+          - "Topic: Food science and technique"
+          - "Features: Understand the \"why\" behind techniques"
+          - "Best for: Troubleshooting based on science"
+        personal_favorite: false
+        personal_experience: "Not personally tested"
+
+# Site configuration
+affiliate_tag: "kneadfulthing-20"
+base_amazon_url: "https://amazon.com/dp/"

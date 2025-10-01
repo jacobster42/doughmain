@@ -1,9 +1,19 @@
 services:
   jekyll:
-    image: jekyll/jekyll
-    command: jekyll serve --livereload --host 0.0.0.0
+    image: jekyll/jekyll:latest
+    platform: linux/amd64
+    command: jekyll serve --config _config.yml --host 0.0.0.0 --livereload --force_polling
     ports:
       - "4000:4000"
+      - "35729:35729"
     volumes:
-      - .:/srv/jekyllls
-      
+      - .:/srv/jekyll
+      - jekyll_bundle:/usr/local/bundle
+    environment:
+      - JEKYLL_ENV=development
+      - BUNDLE_PATH=/usr/local/bundle
+    stdin_open: true
+    tty: true
+
+volumes:
+  jekyll_bundle:
