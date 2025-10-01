@@ -4,25 +4,18 @@ layout: home
 
 <!-- Hero Section -->
 <div class="hero-section">
-  <h1>Perfect Bread, Every Time</h1>
-  <p>Master the art and science of bread baking with proven recipes, troubleshooting guides, and honest tool reviews from a data professional turned bread enthusiast.</p>
+  <h1>Data-Driven Pretzel and Bread Baking</h1>
+  <p>A data analyst's approach to finding essential bread and pretzel baking supplies. Honest reviews, side-by-side comparisons, and easy recipes to help you bake like a pro without the stress.</p>
 </div>
 
-<!-- Featured Content -->
+<!-- Blog Posts Widget -->
 <section class="featured-content">
-  <h2>Get Started</h2>
-  <div class="feature-grid">
-    <div class="feature-item">
-      <h3>🥨 Beer Soft Pretzels</h3>
-      <p>Master the perfect beer soft pretzel with foolproof formulas that work every time.</p>
-    </div>
-    <div class="feature-item">
-      <h3>🔧 Tool Reviews</h3>
-      <p>Honest reviews of mixers, scales, and baking equipment that deliver consistent results.</p>
-    </div>
-    <div class="feature-item">
-      <h3>🧪 Troubleshooting</h3>
-      <p>Debug your baking with systematic approaches to common baking problems.</p>
+  <h2>Latest from the Blog</h2>
+  <div class="blog-widget">
+    <div class="upcoming-post">
+      <h3>Coming Soon: Pretzel Kit vs Homemade: Which Is Actually Better?</h3>
+      <p>I'm testing multiple pretzel making kits side-by-side with ingredients from scratch to find out which approach gives you better results, value, and flexibility. Stay tuned for the full analysis!</p>
+      <a href="#" class="blog-link" onclick="alert('Coming soon! This comprehensive comparison is in progress. Drop a blog suggestion in the contact form or check back for the full analysis!'); return false;">Read More →</a>
     </div>
   </div>
 </section>
