@@ -30,7 +30,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "doughmainlogic.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
-
+pinterest_url: https://pinterest.com/doughmainlogic/essential-bread-and-pretzel-supplies/
 # Build settings
 theme: minima
 plugins:
