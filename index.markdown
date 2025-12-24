@@ -6,6 +6,10 @@ layout: home
 <div class="hero-section">
   <h1>Data-Driven Pretzel and Bread Baking</h1>
   <p>A data analyst's approach to finding essential bread and pretzel baking supplies. Honest reviews, side-by-side comparisons, and easy recipes to help you bake like a pro without the stress.</p>
+  <!-- Hero Image -->
+  <div class="hero-image">
+    <img src="/assets/images/homemade-pretzels.jpeg" alt="Homemade Pretzels">
+  </div>
 </div>
 
 <!-- Blog Posts Widget -->
