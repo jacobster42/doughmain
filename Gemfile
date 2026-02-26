@@ -1,11 +1,9 @@
 source "https://rubygems.org"
 
-# GitHub Pages compatible setup
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+gem "minima", "~> 2.5"
 gem "webrick"
-
-# Remove any ruby version specification that might conflict
-# Don't specify: ruby "3.1.0" or similar
+gem "jekyll-feed"
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
