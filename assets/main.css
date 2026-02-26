@@ -450,7 +450,7 @@ body { font-family: "Georgia", "Times New Roman", serif; line-height: 1.6; backg
 
 .page-content *, .page-content *::before, .page-content *::after, .post *, .post *::before, .post *::after, .home *, .home *::before, .home *::after, main *, main *::before, main *::after, article *, article *::before, article *::after, .post-content *, .post-content *::before, .post-content *::after { text-align: left !important; }
 
-.page-content p, .page-content ul, .page-content ol, .page-content blockquote, .page-content div, .page-content span, .post p, .post ul, .post ol, .post blockquote, .post div, .post span, .home p, .home ul, .home ol, .home blockquote, .home div, .home span, main p, main ul, main ol, main blockquote, main div, main span, article p, article ul, article ol, article blockquote, article div, article span, .post-content p, .post-content ul, .post-content ol, .post-content blockquote, .post-content div, .post-content span { margin-bottom: 1rem; text-align: left !important; }
+.page-content p, .page-content ul, .page-content ol, .page-content blockquote, .page-content div, .page-content span, .post p, .post ul, .post ol, .post blockquote, .post div, .post span, .home p, .home ul, .home ol, .home blockquote, .home div, .home span, main p, main ul, main ol, main blockquote, main div, main span, article p, article ul, article ol, article blockquote, article div, article span, .post-content p, .post-content ul, .post-content ol, .post-content blockquote, .post-content div, .post-content span { margin-bottom: 1rem; text-align: left !important; max-width: 700px; }
 
 .page-content p:last-child, .page-content ul:last-child, .page-content ol:last-child, .page-content blockquote:last-child, .page-content div:last-child, .page-content span:last-child, .post p:last-child, .post ul:last-child, .post ol:last-child, .post blockquote:last-child, .post div:last-child, .post span:last-child, .home p:last-child, .home ul:last-child, .home ol:last-child, .home blockquote:last-child, .home div:last-child, .home span:last-child, main p:last-child, main ul:last-child, main ol:last-child, main blockquote:last-child, main div:last-child, main span:last-child, article p:last-child, article ul:last-child, article ol:last-child, article blockquote:last-child, article div:last-child, article span:last-child, .post-content p:last-child, .post-content ul:last-child, .post-content ol:last-child, .post-content blockquote:last-child, .post-content div:last-child, .post-content span:last-child { margin-bottom: 0; }
 
@@ -470,13 +470,15 @@ main .wrapper { text-align: left !important; }
 
 main .wrapper * { text-align: left !important; }
 
-.post-content { text-align: left !important; margin-left: 0 !important; margin-right: auto !important; }
+.post-content { text-align: left !important; margin-left: 0 !important; margin-right: auto !important; max-width: 700px; }
 
 .post-content h2 { text-align: center !important; white-space: nowrap !important; max-width: 700px; }
 
-.post-content h1, .post-content h3, .post-content h4, .post-content h5, .post-content h6 { text-align: left !important; margin-left: 0 !important; white-space: nowrap !important; }
+.post-content h1 { text-align: left !important; margin-left: 0 !important; width: 100%; max-width: 100% !important; }
 
-.post-content p, .post-content ul, .post-content ol, .post-content li { text-align: left !important; margin-left: 0 !important; max-width: 700px; }
+.post-content h3, .post-content h4, .post-content h5, .post-content h6 { text-align: left !important; margin-left: 0 !important; white-space: nowrap !important; }
+
+.post-content p, .post-content ul, .post-content ol, .post-content li { text-align: left !important; margin-left: 0 !important; max-width: 100%; }
 
 article, .post, .page { text-align: left !important; }
 
