@@ -8,14 +8,14 @@ layout: home
   <div class="hero-image">
     <img src="/assets/images/homemade-pretzels.jpeg" alt="Homemade Pretzels">
   </div>
-  <p><em>Doughmain Logic is a baking blog about bread and pretzels, written by Jacob who also writes code personally and professionally. Here you'll find honest baked product reviews, raw ingredient vs baking kit comparisons, product suggesstions, and helpful baking tools!</em></p>
+  <p><em>Doughmain Logic is a bread and pretzel baking blog - built by a data analyst who also bakes. Here you'll find real product reviews, raw ingredient vs baking kit comparisons, product suggestions, and interactive tools designed to take the guesswork out of baking.</em></p>
 </div>
 
 <!-- Blog Posts Widget -->
 <section class="featured-content">
   <h2>Latest from the Blog</h2>
   <a href="#" class="upcoming-post" onclick="alert('Coming soon! This comprehensive comparison is in progress. Drop a blog suggestion in the contact form or check back for the full analysis!'); return false;">
-    <h3>Coming Soon: Pretzel Kit vs Homemade — Which Is Actually Better?</h3>
+    <h3>Coming Soon: Pretzel Kits vs Homemade — Which Is Actually Better?</h3>
     <span class="blog-arrow">→</span>
   </a>
 </section>
