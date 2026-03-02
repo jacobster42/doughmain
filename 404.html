@@ -31,12 +31,51 @@
           <a class="page-link" href="/">Home</a>
           <a class="page-link" href="/about/">About</a>
           <a class="page-link" href="#" onclick="alert('Blog coming soon! I\'m working on detailed reviews and tutorials. Stay tuned!'); return false;">Blog</a>
-          <!-- <a class="page-link" href="/essentials/">Essentials</a>
-          <a class="page-link" href="/troubleshooting/">Troubleshooting</a> -->
+          <div class="nav-dropdown" id="nav-tools-dropdown">
+            <input type="checkbox" id="tools-trigger" class="tools-trigger" />
+            <label for="tools-trigger" class="page-link tools-toggle">Tools <span class="dropdown-arrow">▾</span></label>
+            <div class="tools-menu" id="tools-menu">
+              <!-- Add tool links here -->
+              <a class="tools-link" href="/tools/desired-dough-temperature/">Water Temp Calculator</a>
+            </div>
+          </div>
           <a class="page-link" href="/contact/">Contact</a>
         </div>
       </nav></div>
-</header><main class="page-content" aria-label="Content">
+</header>
+
+<script>
+(function() {
+  var dropdown = document.getElementById('nav-tools-dropdown');
+  var menu = document.getElementById('tools-menu');
+  var arrow = dropdown && dropdown.querySelector('.dropdown-arrow');
+  if (!dropdown || !menu) return;
+
+  // Mobile uses the checkbox; desktop uses JS hover
+  if (window.innerWidth < 601) return;
+
+  var hideTimer;
+
+  function openMenu() {
+    clearTimeout(hideTimer);
+    menu.classList.add('is-open');
+    if (arrow) arrow.style.transform = 'rotate(180deg)';
+  }
+
+  function closeMenu() {
+    hideTimer = setTimeout(function() {
+      menu.classList.remove('is-open');
+      if (arrow) arrow.style.transform = '';
+    }, 200);
+  }
+
+  dropdown.addEventListener('mouseenter', openMenu);
+  dropdown.addEventListener('mouseleave', closeMenu);
+  menu.addEventListener('mouseenter', openMenu);
+  menu.addEventListener('mouseleave', closeMenu);
+})();
+</script>
+<main class="page-content" aria-label="Content">
       <div class="wrapper">
         <style type="text/css" media="screen">
   .container {

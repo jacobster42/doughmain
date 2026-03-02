@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Water Temperature Calculator - Doughmain Logic</title>
+    <meta name="description" content="What started as an obsession with creating the perfect homemade beer soft pretzel has grown into a passion for all things dough. Discover the techniques, rec...">
+
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="canonical" href="https://doughmainlogic.com/tools/desired-dough-temperature/">
+
+    
+  </head>
+
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Doughmain Logic</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/">Home</a>
+          <a class="page-link" href="/about/">About</a>
+          <a class="page-link" href="#" onclick="alert('Blog coming soon! I\'m working on detailed reviews and tutorials. Stay tuned!'); return false;">Blog</a>
+          <div class="nav-dropdown" id="nav-tools-dropdown">
+            <input type="checkbox" id="tools-trigger" class="tools-trigger" />
+            <label for="tools-trigger" class="page-link tools-toggle">Tools <span class="dropdown-arrow">▾</span></label>
+            <div class="tools-menu" id="tools-menu">
+              <!-- Add tool links here -->
+              <a class="tools-link" href="/tools/desired-dough-temperature/">Water Temp Calculator</a>
+            </div>
+          </div>
+          <a class="page-link" href="/contact/">Contact</a>
+        </div>
+      </nav></div>
+</header>
+
+<script>
+(function() {
+  var dropdown = document.getElementById('nav-tools-dropdown');
+  var menu = document.getElementById('tools-menu');
+  var arrow = dropdown && dropdown.querySelector('.dropdown-arrow');
+  if (!dropdown || !menu) return;
+
+  // Mobile uses the checkbox; desktop uses JS hover
+  if (window.innerWidth < 601) return;
+
+  var hideTimer;
+
+  function openMenu() {
+    clearTimeout(hideTimer);
+    menu.classList.add('is-open');
+    if (arrow) arrow.style.transform = 'rotate(180deg)';
+  }
+
+  function closeMenu() {
+    hideTimer = setTimeout(function() {
+      menu.classList.remove('is-open');
+      if (arrow) arrow.style.transform = '';
+    }, 200);
+  }
+
+  dropdown.addEventListener('mouseenter', openMenu);
+  dropdown.addEventListener('mouseleave', closeMenu);
+  menu.addEventListener('mouseenter', openMenu);
+  menu.addEventListener('mouseleave', closeMenu);
+})();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <div class="post-content">
+    <!-- Interactive Dough Temperature Calculator -->
+
+<section id="dough-calculator" class="calculator">
+
+  <p class="calc-intro">Enter your temperatures below and the calculator will tell you what water temperature to use. Formula: <strong>Water Temp = (DDT × 3) − (Flour Temp + Room Temp + Friction Temp)</strong>.</p>
+
+  <!-- ── INPUTS ─────────────────────────────────────── -->
+  <div class="calc-section inputs-section">
+    <h3 class="calc-section-heading">Inputs</h3>
+
+    <div class="units-row">
+      <label class="units-label">Units:
+        <select id="unit">
+          <option value="F">°F</option>
+          <option value="C">°C</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="grid">
+      <label class="field">
+        <span class="field-name">Desired Dough Temp <abbr title="Desired Dough Temperature">(DDT)</abbr></span>
+        <input id="ddt" type="number" value="78" />
+        <span class="field-hint">The final dough temperature you're aiming for</span>
+      </label>
+
+      <label class="field">
+        <span class="field-name">Flour Temp</span>
+        <input id="flour" type="number" value="75" />
+        <span class="field-hint">Measure with a thermometer at the center of the bag</span>
+      </label>
+
+      <label class="field">
+        <span class="field-name">Room Temp</span>
+        <input id="room" type="number" value="72" />
+        <span class="field-hint">Ambient temperature where you're mixing</span>
+      </label>
+
+      <label class="field">
+        <span class="field-name">Friction Temp</span>
+        <input id="friction" type="number" value="20" />
+        <span class="field-hint">Heat from mixing — 0 for hand-mix, 10–25°F for a stand mixer</span>
+      </label>
+
+      <label class="field prefcheck" style="grid-column:1 / -1">
+        <span class="field-name">Include pre-ferment?</span>
+        <div class="checkbox-row">
+          <input id="usePref" type="checkbox" />
+          <span class="field-hint" style="margin-top:0">Check if your recipe uses a poolish, levain, or other pre-ferment</span>
+        </div>
+      </label>
+
+      <div id="preWrap" style="display:none;grid-column:1 / -1;grid-template-columns:1fr 1fr;gap:0.75rem">
+        <label class="field">
+          <span class="field-name">Pre-ferment Temp</span>
+          <input id="preTemp" type="number" value="75" />
+          <span class="field-hint">Temperature of your starter or poolish</span>
+        </label>
+        <label class="field">
+          <span class="field-name">Pre-ferment % of flour</span>
+          <input id="prePercent" type="number" value="20" min="0" max="100" />
+          <span class="field-hint">What % of total flour weight is in the pre-ferment</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RESULT ─────────────────────────────────────── -->
+  <div class="calc-section result-section">
+    <h3 class="calc-section-heading">Result</h3>
+    <div class="result-box">
+      <span class="result-label">Target Water Temperature</span>
+      <span id="water" class="result-value">—</span>
+      <span class="result-hint">Add water at this temperature to hit your DDT</span>
+    </div>
+  </div>
+
+  <p class="calc-notes">Results are advisory — always verify by experience. Friction values vary by mixer model and batch size.</p>
+
+  <h3>Learn More</h3>
+  <a href="https://www.kingarthurbaking.com/blog/2018/05/29/desired-dough-temperature" target="_blank">Why does dough temperature mater?</a>
+
+<h3>Products that help</h3>
+
+
+</section>
+
+<style>
+  .calculator {
+    max-width: 680px;
+    margin: 1rem 0;
+    font-family: inherit;
+  }
+
+  .calc-intro {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Sections */
+  .calc-section {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem 1.25rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .inputs-section { background: #fafafa; }
+
+  .calc-section-heading {
+    font-size: 0.75rem !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+    margin: 0 0 1rem 0 !important;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  /* Units row */
+  .units-row {
+    margin-bottom: 0.75rem;
+  }
+
+  .units-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Input grid */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  /* Individual fields */
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .field-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+  }
+
+  .field input, .units-label select {
+    padding: 0.45rem 0.6rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.15s;
+  }
+
+  .field input:focus, .units-label select:focus {
+    outline: none;
+    border-color: #8C6D46;
+    box-shadow: 0 0 0 2px rgba(140,109,70,0.15);
+  }
+
+  .field-hint {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  /* Pre-ferment checkbox row */
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2px;
+  }
+
+  .checkbox-row input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    accent-color: #8C6D46;
+  }
+
+  /* Result box */
+  .result-section {
+    background: #4A3728;
+    border-color: #4A3728;
+  }
+
+  .result-section .calc-section-heading {
+    color: rgba(255,255,255,0.6);
+    border-bottom-color: rgba(255,255,255,0.15);
+  }
+
+  .result-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 0.5rem 0;
+  }
+
+  .result-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .result-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #F7F4EF;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .result-hint {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .calc-notes {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; }
+    #preWrap { grid-template-columns: 1fr !important; }
+    .result-value { font-size: 2rem; }
+  }
+</style>
+
+<script>
+  (function(){
+    const $ = id => document.getElementById(id);
+    const unit = $('unit');
+    const inputs = ['ddt','flour','room','friction','preTemp'];
+    const usePref = $('usePref');
+
+    function parseVal(id){
+      const v = parseFloat($(id).value);
+      return Number.isFinite(v) ? v : 0;
+    }
+
+    function compute(){
+      let ddt      = parseVal('ddt');
+      let flour    = parseVal('flour');
+      let room     = parseVal('room');
+      let friction = parseVal('friction');
+
+      let adjustedFlour = flour;
+      if(usePref && usePref.checked){
+        let preTemp    = parseVal('preTemp');
+        let prePercent = parseFloat($('prePercent').value) || 0;
+        let pf = Math.max(0, Math.min(100, prePercent)) / 100;
+        adjustedFlour = (flour * (1 - pf)) + (preTemp * pf);
+      }
+
+      let water     = (ddt * 3) - (adjustedFlour + room + friction);
+      const u       = unit.value;
+      const rounded = Math.round(water * 10) / 10;
+
+      const el = $('water');
+      el.textContent = rounded + ' °' + u;
+
+      const boiling = u === 'F' ? 212 : 100;
+      if(rounded > boiling){
+        el.style.color = '#f87171';
+      } else if(rounded < (u === 'F' ? 32 : 0)){
+        el.style.color = '#60a5fa';
+      } else {
+        el.style.color = '#F7F4EF';
+      }
+    }
+
+    function toC(f){ return (f - 32) * (5/9); }
+    function toF(c){ return (c * (9/5)) + 32; }
+
+    function switchUnits(){
+      const to = unit.value;
+      inputs.forEach(id => {
+        let v = parseVal(id);
+        if(isNaN(v)) v = 0;
+        $(id).value = to === 'C'
+          ? Math.round(toC(v) * 10) / 10
+          : Math.round(toF(v) * 10) / 10;
+      });
+      compute();
+    }
+
+    inputs.forEach(id => $(id).addEventListener('input', compute));
+    if(usePref) $('prePercent').addEventListener('input', compute);
+    if(usePref) usePref.addEventListener('change', function(){
+      const wrap = $('preWrap');
+      wrap.style.display = this.checked ? 'grid' : 'none';
+      compute();
+    });
+    unit.addEventListener('change', switchUnits);
+
+    compute();
+  })();
+</script>
+
+
+  </div>
+
+</article>
+      </div>
+    </main><footer class="site-footer">
+  <!-- Top section: Site info and social -->
+  <div class="footer-top">
+    <div class="footer-info">
+      <h3 class="footer-site-title">Doughmain Logic</h3>
+      <p class="footer-contact">Questions? <a href="/contact/">Get in touch</a></p>
+      <p class="footer-location">Mix it, Make it, Bake it</p>
+    </div>
+    <!-- <div class="footer-social">
+      <a href="https://pinterest.com/doughmainlogic/essential-bread-and-pretzel-supplies/" class="social-icon" target="_blank" rel="noopener" title="Follow on Pinterest">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C8.76,20.5 8.69,19.12 8.93,18.04L9.96,13.5C9.96,13.5 9.69,12.97 9.69,12.16C9.69,10.86 10.4,9.85 11.29,9.85C12.04,9.85 12.4,10.37 12.4,11.02C12.4,11.74 11.94,12.81 11.71,13.8C11.53,14.61 12.14,15.27 12.94,15.27C14.39,15.27 15.5,13.75 15.5,11.58C15.5,9.69 14.19,8.38 12.04,8.38C9.58,8.38 8.14,10.23 8.14,12.13C8.14,12.86 8.43,13.64 8.79,14.06C8.86,14.15 8.87,14.23 8.84,14.32L8.6,15.33C8.56,15.5 8.47,15.54 8.29,15.46C7.31,15 6.7,13.5 6.7,12.08C6.7,9.29 8.68,6.78 12.26,6.78C15.17,6.78 17.46,8.84 17.46,11.54C17.46,14.38 15.72,16.66 13.27,16.66C12.46,16.66 11.69,16.24 11.44,15.74L10.95,17.66C10.75,18.46 10.18,19.46 9.8,20.07C10.5,20.36 11.24,20.5 12,20.5A8.5,8.5 0 0,0 20.5,12A8.5,8.5 0 0,0 12,3.5Z"/>
+        </svg>
+      </a>
+     </div> -->
+     <!-- Not Ready for production yet -->
+  </div>
+
+  <!-- Bottom section: Navigation and copyright -->
+  <div class="footer-bottom">
+    <nav class="footer-nav">
+      <a href="/" class="footer-nav-link">HOME</a>
+      <a href="/about/" class="footer-nav-link">ABOUT</a>
+      <!-- <a href="#" class="footer-nav-link" onclick="alert('Blog coming soon! I\'m working on detailed reviews and tutorials. Stay tuned!'); return false;">BLOG</a> -->
+      <a href="/contact/" class="footer-nav-link">CONTACT</a>
+      <!-- <a href="/disclosure/" class="footer-nav-link">DISCLOSURE</a> -->
+      <a href="/privacy/" class="footer-nav-link">PRIVACY</a>
+    </nav>
+    <div class="footer-copyright">
+      &copy;Copyright. All rights reserved.
+    </div>
+  </div>
+</footer></body>
+
+</html>
