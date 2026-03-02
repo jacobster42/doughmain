@@ -53,6 +53,15 @@ body {
     float: none;
     margin-left: auto;
 
+    // Desktop: stretch to full header height and become the positioning context
+    // for the Tools dropdown so top:100% lands flush at the header bottom edge
+    @media screen and (min-width: 601px) {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
     .page-link {
       color: $flour-white;
       font-weight: 500;
@@ -1474,6 +1483,87 @@ article, .post, .page {
   // Prevent zoom on inputs (already covered in contact form)
   input, select, textarea {
     font-size: 16px !important;
+  }
+}
+
+// Tools dropdown — toggle label and checkbox
+.nav-dropdown {
+  display: inline-block;
+
+  .tools-trigger { display: none; }
+
+  .tools-toggle {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    .dropdown-arrow {
+      font-size: 0.65rem;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  // Mobile only: checkbox drives the submenu
+  @media (max-width: 600px) {
+    display: block;
+
+    .tools-toggle {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 1rem;
+      margin: 0;
+      color: $flour-white;
+      &:hover { background-color: $golden-crust; color: $flour-white; }
+    }
+
+    .tools-trigger:checked ~ .tools-toggle .dropdown-arrow { transform: rotate(180deg); }
+
+    .tools-trigger:checked ~ .tools-menu {
+      display: block;
+      position: static;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+
+      .tools-link { padding-left: 2rem; font-size: 0.95rem; }
+    }
+  }
+}
+
+// Tools dropdown menu — positioned relative to .site-nav (which stretches to header height)
+.tools-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: $crust-brown;
+  min-width: max-content;
+  z-index: 1001;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.35);
+  padding: 0.15rem 0;
+
+  &.is-open { display: block; }
+
+  .tools-link {
+    display: block;
+    padding: 0.3rem 0.75rem;
+    color: $flour-white;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:last-child { border-bottom: none; }
+    &:hover { background-color: $golden-crust; color: $flour-white; }
   }
 }
 
