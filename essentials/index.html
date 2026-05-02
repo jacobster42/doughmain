@@ -39,6 +39,18 @@
               <a class="tools-link" href="/tools/desired-dough-temperature/">Water Temp Calculator</a>
             </div>
           </div>
+          <div class="nav-dropdown" id="nav-essentials-dropdown">
+            <input type="checkbox" id="essentials-trigger" class="tools-trigger" />
+            <label for="essentials-trigger" class="page-link tools-toggle">Essentials <span class="dropdown-arrow">▾</span></label>
+            <div class="tools-menu" id="essentials-menu">
+              <a class="tools-link" href="/essentials/tools/">Tools</a>
+              <a class="tools-link" href="/essentials/mixers/">Mixers</a>
+              <a class="tools-link" href="/essentials/bakeware/">Bakeware</a>
+              <a class="tools-link" href="/essentials/thermometers/">Thermometers</a>
+              <a class="tools-link" href="/essentials/ingredients/">Ingredients</a>
+              <a class="tools-link" href="/essentials/learning/">Learning</a>
+            </div>
+          </div>
           <a class="page-link" href="/contact/">Contact</a>
         </div>
       </nav></div>
@@ -46,33 +58,46 @@
 
 <script>
 (function() {
-  var dropdown = document.getElementById('nav-tools-dropdown');
-  var menu = document.getElementById('tools-menu');
-  var arrow = dropdown && dropdown.querySelector('.dropdown-arrow');
-  if (!dropdown || !menu) return;
+  function initDropdown(dropdownId, menuId) {
+    var dropdown = document.getElementById(dropdownId);
+    var menu = document.getElementById(menuId);
+    var arrow = dropdown && dropdown.querySelector('.dropdown-arrow');
+    if (!dropdown || !menu) return;
+    if (window.innerWidth < 601) return;
 
-  // Mobile uses the checkbox; desktop uses JS hover
-  if (window.innerWidth < 601) return;
+    var hideTimer;
 
-  var hideTimer;
+    function alignMenu() {
+      var nav = dropdown.closest('.site-nav');
+      if (nav) {
+        var navRect = nav.getBoundingClientRect();
+        var dropRect = dropdown.getBoundingClientRect();
+        menu.style.left = (dropRect.left - navRect.left) + 'px';
+      }
+    }
 
-  function openMenu() {
-    clearTimeout(hideTimer);
-    menu.classList.add('is-open');
-    if (arrow) arrow.style.transform = 'rotate(180deg)';
+    function openMenu() {
+      clearTimeout(hideTimer);
+      alignMenu();
+      menu.classList.add('is-open');
+      if (arrow) arrow.style.transform = 'rotate(180deg)';
+    }
+
+    function closeMenu() {
+      hideTimer = setTimeout(function() {
+        menu.classList.remove('is-open');
+        if (arrow) arrow.style.transform = '';
+      }, 200);
+    }
+
+    dropdown.addEventListener('mouseenter', openMenu);
+    dropdown.addEventListener('mouseleave', closeMenu);
+    menu.addEventListener('mouseenter', openMenu);
+    menu.addEventListener('mouseleave', closeMenu);
   }
 
-  function closeMenu() {
-    hideTimer = setTimeout(function() {
-      menu.classList.remove('is-open');
-      if (arrow) arrow.style.transform = '';
-    }, 200);
-  }
-
-  dropdown.addEventListener('mouseenter', openMenu);
-  dropdown.addEventListener('mouseleave', closeMenu);
-  menu.addEventListener('mouseenter', openMenu);
-  menu.addEventListener('mouseleave', closeMenu);
+  initDropdown('nav-tools-dropdown', 'tools-menu');
+  initDropdown('nav-essentials-dropdown', 'essentials-menu');
 })();
 </script>
 <main class="page-content" aria-label="Content">
@@ -82,736 +107,989 @@
   <div class="post-content">
     <h1 id="essential-baking-tools--equipment">Essential Baking Tools &amp; Equipment</h1>
 
-<p>After years of testing and countless loaves, these are the tools that consistently deliver professional results in a home kitchen. Each recommendation is battle-tested and chosen for reliability, accuracy, and value.</p>
+<p>After years of testing and countless loaves, these are the tools that consistently deliver professional results in a home kitchen. Each recommendation is chosen for reliability, accuracy, and value.</p>
 
-<p><em>This page contains affiliate links. When you purchase through these links, you help support this site at no extra cost to you.</em></p>
+<div class="section-cards">
+  
+  
+  <a class="section-card" href="#must-haves" onclick="var el=document.getElementById('must-haves');if(el){el.open=true;}">
+    <div class="section-card-title">The Must-Haves</div>
+    <div class="section-card-desc">Start here. The tools that make the biggest difference.</div>
+  </a>
+  
+  
+  <a class="section-card" href="#precision" onclick="var el=document.getElementById('precision');if(el){el.open=true;}">
+    <div class="section-card-title">Precision Instruments</div>
+    <div class="section-card-desc">Temperature and measurement tools for consistent results.</div>
+  </a>
+  
+  
+  <a class="section-card" href="#baking" onclick="var el=document.getElementById('baking');if(el){el.open=true;}">
+    <div class="section-card-title">Baking Vessels</div>
+    <div class="section-card-desc">Pans, pots, baskets, and mats for every type of dough.</div>
+  </a>
+  
+  
+  <a class="section-card" href="#tools" onclick="var el=document.getElementById('tools');if(el){el.open=true;}">
+    <div class="section-card-title">Hand Tools</div>
+    <div class="section-card-desc">The small tools that make a big difference at the bench.</div>
+  </a>
+  
+  
+  <a class="section-card" href="#specialty" onclick="var el=document.getElementById('specialty');if(el){el.open=true;}">
+    <div class="section-card-title">Pretzel Specialty</div>
+    <div class="section-card-desc">Ingredients and gear for homemade soft pretzels.</div>
+  </a>
+  
+  
+  <a class="section-card" href="#reading" onclick="var el=document.getElementById('reading');if(el){el.open=true;}">
+    <div class="section-card-title">Essential Reading</div>
+    <div class="section-card-desc">The books that shaped how I think about dough.</div>
+  </a>
+  
+</div>
 
-<p><strong>Important Note:</strong> While I haven’t necessarily used the exact models listed below, I have extensive experience with all of these product categories and find them essential for getting started and making quality baked doughs. These specific models are highly-rated options that represent the best value in each category. I plan to update this page with my actual gear as I document the specific models I use.</p>
-
-<div class="product-section">
-<h2>🏆 The Must-Haves</h2>
+<details id="must-haves" class="product-section">
+<summary><h2>The Must-Haves</h2></summary>
 
 
 
   
-
-<h3>Kitchen Scale - Digital Precision</h3>
-<p><strong>Why you need it:</strong> Baking is chemistry. Volume measurements vary; weight doesn't.</p>
-
+<h3>Kitchen Scales</h3>
+<p>Baking is chemistry. Volume measurements vary; weight doesn't.</p>
 <div class="product-grid">
 
-<div class="product-card">
-  
-  <div class="personal-favorite-badge">
-    ✅ <strong>Personal Favorite</strong> - I use this exact model daily
+<a class="product-card" href="https://amazon.com/dp/B01H5ZRRJE?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/ozeri-zk12-r-pronto-digital-kitchen-scale.jpg" alt="Ozeri ZK12-R Pronto Digital Kitchen Scale" />
+    
+    <span class="personal-favorite-badge">My Pick</span>
   </div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B01H5ZRRJE?tag=kneadfulthing-20">Ozeri ZK12-R Pronto Digital Kitchen Scale</a></h4>
-    </div>
+  <div class="product-info">
+    <h4>Ozeri ZK12-R Pronto Digital Kitchen Scale</h4>
     <div class="product-price">~$15</div>
-    <ul class="product-specs">
-      
-      <li>Capacity: 12 lbs (perfect for large batches)</li>
-      
-      <li>Precision: 0.05 oz accuracy</li>
-      
-      <li>Features: Ultra-thin design, large platform, automatic shut-off</li>
-      
-      <li>Price: ~$15</li>
-      
-    </ul>
   </div>
-</div>
+</a>
 
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B0113UZJE2?tag=kneadfulthing-20">Etekcity Digital Kitchen Scale</a></h4>
-    </div>
+<a class="product-card" href="https://amazon.com/dp/B0113UZJE2?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/etekcity-digital-kitchen-scale.jpg" alt="Etekcity Digital Kitchen Scale" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Etekcity Digital Kitchen Scale</h4>
     <div class="product-price">~$15</div>
-    <ul class="product-specs">
-      
-      <li>Great starter scale under $15</li>
-      
-      <li>11 lb capacity, 0.1 oz precision</li>
-      
-    </ul>
   </div>
-</div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B079C4Y9P2?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/oxo-good-grips-11-lb-food-scale.jpg" alt="OXO Good Grips 11 lb Food Scale" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>OXO Good Grips 11 lb Food Scale</h4>
+    <div class="product-price">~$50</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B002SVRCEK?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/my-weigh-kd-8000-bakers-scale.jpg" alt="My Weigh KD-8000 Baker's Scale" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>My Weigh KD-8000 Baker's Scale</h4>
+    <div class="product-price">~$55</div>
+  </div>
+</a>
 
 </div>
-
 
   
-
-<h3>Stand Mixer - The Workhorse</h3>
-<p><strong>Why you need it:</strong> Consistent kneading, handles heavy doughs, frees your hands.</p>
-
+<h3>Stand Mixers</h3>
+<p>Consistent kneading, handles heavy doughs, frees your hands.</p>
 <div class="product-grid">
 
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B00005UP2P?tag=kneadfulthing-20">KitchenAid Artisan 5-Qt Stand Mixer</a></h4>
-    </div>
+<a class="product-card" href="https://amazon.com/dp/B00005UP2P?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/kitchenaid-artisan-5-qt-stand-mixer.jpg" alt="KitchenAid Artisan 5-Qt Stand Mixer" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>KitchenAid Artisan 5-Qt Stand Mixer</h4>
     <div class="product-price">~$300-400</div>
-    <ul class="product-specs">
-      
-      <li>Motor: 325-watt (handles most bread doughs)</li>
-      
-      <li>Capacity: 5 quarts (2 large loaves)</li>
-      
-      <li>Attachments: Includes dough hook, whisk, paddle</li>
-      
-      <li>Durability: Built to last decades</li>
-      
-      <li>Price: ~$300-400</li>
-      
-    </ul>
   </div>
-</div>
+</a>
 
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B00063ULMI?tag=kneadfulthing-20">KitchenAid Professional 6-Qt</a></h4>
-    </div>
+<a class="product-card" href="https://amazon.com/dp/B00063ULMI?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/kitchenaid-professional-6-qt.jpg" alt="KitchenAid Professional 6-Qt" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>KitchenAid Professional 6-Qt</h4>
     <div class="product-price">~$400-500</div>
-    <ul class="product-specs">
-      
-      <li>575-watt motor for frequent baking</li>
-      
-      <li>6-quart capacity for large families</li>
-      
-    </ul>
   </div>
-</div>
+</a>
 
-</div>
-
-
-  
-
-<h3>Bench Scraper - The Unsung Hero</h3>
-<p><strong>Why you need it:</strong> Dough handling, portioning, cleaning - does everything.</p>
-
-<div class="product-grid">
-
-<div class="product-card">
-  
-  <div class="personal-favorite-badge">
-    ✅ <strong>Personal Favorite</strong> - Built-in ruler is helpful when making pretzel bites
+<a class="product-card" href="https://amazon.com/dp/B00IOTSAQY?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/cuisinart-sm-50-stand-mixer.jpg" alt="Cuisinart SM-50 5.5-Qt Stand Mixer" />
+    
+    
   </div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B07255T6SW?tag=kneadfulthing-20">Amazon Basics Multi-Purpose Stainless Steel Scraper/Chopper</a></h4>
-    </div>
-    <div class="product-price">~$8</div>
-    <ul class="product-specs">
-      
-      <li>Material: Stainless steel with contoured grip handle</li>
-      
-      <li>Size: 6-inch blade perfect for most tasks</li>
-      
-      <li>Features: Rounded corners, ergonomic black handle, built-in ruler</li>
-      
-      <li>Uses: Cutting dough, chopping vegetables, scraping surfaces</li>
-      
-      <li>Price: ~$8</li>
-      
-    </ul>
+  <div class="product-info">
+    <h4>Cuisinart SM-50 5.5-Qt Stand Mixer</h4>
+    <div class="product-price">~$200</div>
   </div>
-</div>
+</a>
 
-</div>
-
-
-</div>
-
-<div class="product-section">
-<h2>🌡️ Precision Instruments</h2>
-
-
-
-  
-
-<h3>Instant-Read Thermometer</h3>
-<p><strong>Why you need it:</strong> Know when bread is truly done, verify water temperature.</p>
-
-<div class="product-grid">
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B077LBQZPX?tag=kneadfulthing-20">Thermapen ONE</a></h4>
-    </div>
-    <div class="product-price">~$100</div>
-    <ul class="product-specs">
-      
-      <li>Speed: 1-second readings</li>
-      
-      <li>Accuracy: ±0.5°F</li>
-      
-      <li>Range: -58°F to 572°F</li>
-      
-      <li>Waterproof: IPX7 rated</li>
-      
-      <li>Price: ~$100 (worth every penny)</li>
-      
-    </ul>
+<a class="product-card" href="https://amazon.com/dp/B00004OCNJ?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/kitchenaid-dough-hook-attachment.jpg" alt="KitchenAid Dough Hook Attachment" />
+    
+    
   </div>
-</div>
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B01IHHLB3W?tag=kneadfulthing-20">ThermoPro TP03 - Budget Pick</a></h4>
-    </div>
-    <div class="product-price">Under $15</div>
-    <ul class="product-specs">
-      
-      <li>3-4 second readings</li>
-      
-      <li>±1.8°F accuracy</li>
-      
-      <li>Under $15</li>
-      
-    </ul>
-  </div>
-</div>
-
-</div>
-
-
-  
-
-<h3>Oven Thermometer</h3>
-<p><strong>Why you need it:</strong> Most ovens are off by 25-50°F. Know your real temperature.</p>
-
-<div class="product-grid">
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B00004XSC7?tag=kneadfulthing-20">Taylor Classic Oven Thermometer</a></h4>
-    </div>
-    <div class="product-price">Under $10</div>
-    <ul class="product-specs">
-      
-      <li>Large, easy-to-read dial</li>
-      
-      <li>Hangs on oven rack</li>
-      
-      <li>±25°F accuracy</li>
-      
-      <li>Under $10</li>
-      
-    </ul>
-  </div>
-</div>
-
-</div>
-
-
-</div>
-
-<div class="product-section">
-<h2>🍞 Baking Essentials</h2>
-
-
-
-  
-
-<h3>Loaf Pans - Quality Matters</h3>
-<p><strong>Why these specific ones:</strong> Even heating, easy release, perfect size.</p>
-
-<div class="product-grid">
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B0029JQEIC?tag=kneadfulthing-20">USA Pan 1 lb Loaf Pan (Set of 2)</a></h4>
-    </div>
-    <div class="product-price">~$25 for set</div>
-    <ul class="product-specs">
-      
-      <li>Material: Aluminized steel with nonstick coating</li>
-      
-      <li>Size: 8.5" x 4.5" (standard 1 lb loaf)</li>
-      
-      <li>Features: Even browning, easy release</li>
-      
-      <li>Made in USA</li>
-      
-      <li>Price: ~$25 for set</li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B00006JSUB?tag=kneadfulthing-20">Lodge Cast Iron Loaf Pan</a></h4>
-    </div>
-    <div class="product-price">~$35</div>
-    <ul class="product-specs">
-      
-      <li>Superior heat retention</li>
-      
-      <li>Creates incredible crust</li>
-      
-      <li>Lasts forever</li>
-      
-    </ul>
-  </div>
-</div>
-
-</div>
-
-
-  
-
-<h3>Dutch Oven - Artisan Bread Secret</h3>
-<p><strong>Why these specific ones:</strong> Creates professional steam environment for crusty bread.</p>
-
-<div class="product-grid">
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B000N501BK?tag=kneadfulthing-20">Lodge 5-Quart Dutch Oven</a></h4>
-    </div>
-    <div class="product-price">~$60</div>
-    <ul class="product-specs">
-      
-      <li>Material: Pre-seasoned cast iron</li>
-      
-      <li>Size: Perfect for 1-2 lb loaves</li>
-      
-      <li>Versatility: Bread, soups, roasts</li>
-      
-      <li>Price: ~$60</li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B00005QFSP?tag=kneadfulthing-20">Le Creuset 5.5-Qt Dutch Oven</a></h4>
-    </div>
-    <div class="product-price">~$300+</div>
-    <ul class="product-specs">
-      
-      <li>No seasoning required</li>
-      
-      <li>Beautiful colors</li>
-      
-      <li>Premium price point</li>
-      
-    </ul>
-  </div>
-</div>
-
-</div>
-
-
-  
-
-<h3>Proofing Baskets (Bannetons)</h3>
-<p><strong>Why these specific ones:</strong> Support for final rise, beautiful spiral pattern.</p>
-
-<div class="product-grid">
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B078TBQZPX?tag=kneadfulthing-20">WERTIOO Banneton Set</a></h4>
-    </div>
-    <div class="product-price">~$25 for complete set</div>
-    <ul class="product-specs">
-      
-      <li>Includes: 9" round, 10" oval baskets</li>
-      
-      <li>Material: Natural rattan</li>
-      
-      <li>Accessories: Liners, scraper, lame</li>
-      
-      <li>Price: ~$25 for complete set</li>
-      
-    </ul>
-  </div>
-</div>
-
-</div>
-
-
-</div>
-
-<div class="product-section">
-<h2>🔪 Precision Tools</h2>
-
-
-
-  
-
-<h3>Bread Lame - Scoring Made Simple</h3>
-<p><strong>Why you need it:</strong> Clean, controlled cuts for oven spring.</p>
-
-<div class="product-grid">
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B07L5QQ7N8?tag=kneadfulthing-20">Emile Henry Bread Lame</a></h4>
-    </div>
+  <div class="product-info">
+    <h4>KitchenAid Dough Hook Attachment</h4>
     <div class="product-price">~$20</div>
-    <ul class="product-specs">
-      
-      <li>Replaceable razor blades</li>
-      
-      <li>Comfortable ceramic handle</li>
-      
-      <li>~$20</li>
-      
-    </ul>
   </div>
-</div>
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B004L4EING?tag=kneadfulthing-20">Double-Edge Razor Blades - DIY Alternative</a></h4>
-    </div>
-    <div class="product-price">Under $10</div>
-    <ul class="product-specs">
-      
-      <li>Professional bakers' choice</li>
-      
-      <li>Snap in half for curved cuts</li>
-      
-      <li>Under $10 for 100 blades</li>
-      
-    </ul>
-  </div>
-</div>
+</a>
 
 </div>
 
-
   
-
-<h3>Dough Whisk - Better Than Spoons</h3>
-<p><strong>Why you need it:</strong> Cuts through flour without overworking.</p>
-
+<h3>Bench Scrapers</h3>
+<p>Dough handling, portioning, cleaning - does everything.</p>
 <div class="product-grid">
 
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B000CPOJ0S?tag=kneadfulthing-20">Norpro Danish Dough Whisk</a></h4>
-    </div>
-    <div class="product-price">~$15</div>
-    <ul class="product-specs">
-      
-      <li>Traditional design</li>
-      
-      <li>Beechwood handle</li>
-      
-      <li>~$15</li>
-      
-    </ul>
+<a class="product-card" href="https://amazon.com/dp/B07255T6SW?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/amazon-basics-stainless-steel-scraper.jpg" alt="Amazon Basics Stainless Steel Scraper" />
+    
+    <span class="personal-favorite-badge">My Pick</span>
   </div>
-</div>
-
-</div>
-
-
-</div>
-
-<div class="product-section">
-<h2>🥨 Specialty Items</h2>
-
-
-
-  
-
-<h3>Pretzel-Making Essentials</h3>
-<p><strong>For the pretzel enthusiasts:</strong></p>
-
-<div class="product-grid">
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B000H25HYY?tag=kneadfulthing-20">Coarse Pretzel Salt</a></h4>
-    </div>
+  <div class="product-info">
+    <h4>Amazon Basics Stainless Steel Scraper</h4>
     <div class="product-price">~$8</div>
-    <ul class="product-specs">
-      
-      <li>Authentic coarse grain</li>
-      
-      <li>Essential for proper pretzel flavor</li>
-      
-    </ul>
   </div>
-</div>
+</a>
 
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B078JBQZPX?tag=kneadfulthing-20">Everything But The Bagel Seasoning</a></h4>
-    </div>
-    <div class="product-price">~$6</div>
-    <ul class="product-specs">
-      
-      <li>Perfect for everything pretzels</li>
-      
-      <li>Sesame seeds, poppy seeds, garlic, onion, salt</li>
-      
-    </ul>
+<a class="product-card" href="https://amazon.com/dp/B00004OCLT?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/oxo-good-grips-bench-scraper.jpg" alt="OXO Good Grips Bench Scraper" />
+    
+    
   </div>
-</div>
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B000PYF8VM?tag=kneadfulthing-20">Arm &amp; Hammer Pure Baking Soda</a></h4>
-    </div>
-    <div class="product-price">~$3</div>
-    <ul class="product-specs">
-      
-      <li>Food-grade lye alternative</li>
-      
-      <li>Safe for home use</li>
-      
-    </ul>
+  <div class="product-info">
+    <h4>OXO Good Grips Bench Scraper</h4>
+    <div class="product-price">~$12</div>
   </div>
-</div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B001EO5Q6I?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/plastic-bowl-scraper.jpg" alt="Plastic Bowl Scraper (Set of 2)" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Plastic Bowl Scraper (Set of 2)</h4>
+    <div class="product-price">~$7</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0000VLZJW?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/ateco-bowl-scraper.jpg" alt="Ateco 1355 Flexible Bowl Scraper" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Ateco 1355 Flexible Bowl Scraper</h4>
+    <div class="product-price">~$5</div>
+  </div>
+</a>
 
 </div>
-
 
   
-
-<h3>Pizza Steel - Better Than Stone</h3>
-<p><strong>Faster heat transfer, doesn't crack.</strong></p>
-
+<h3>Mixing Bowls</h3>
+<p>The right bowl makes mixing easier and cleanup faster.</p>
 <div class="product-grid">
 
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/B073W61MK1?tag=kneadfulthing-20">Dough-Joe Pizza Steel</a></h4>
-    </div>
-    <div class="product-price">~$80</div>
-    <ul class="product-specs">
-      
-      <li>Thickness: 1/4" steel plate</li>
-      
-      <li>Size: 16" x 14"</li>
-      
-      <li>Versatility: Pizza, bread, cookies</li>
-      
-      <li>Price: ~$80</li>
-      
-    </ul>
+<a class="product-card" href="https://amazon.com/dp/B00004OCNK?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/oxo-good-grips-3-piece-mixing-bowl-set.jpg" alt="OXO Good Grips 3-Piece Mixing Bowl Set" />
+    
+    
   </div>
-</div>
-
-</div>
-
-
-</div>
-
-<div class="product-section">
-<h2>📚 Knowledge is Power</h2>
-
-
-
-<h3>Essential Reading</h3>
-
-<div class="product-grid">
-
-<div class="product-card">
-  
-  <div class="personal-favorite-badge">
-    ✅ <strong>Personal Favorite</strong> - This was my very first bread book and I still use it over 10 years later
+  <div class="product-info">
+    <h4>OXO Good Grips 3-Piece Mixing Bowl Set</h4>
+    <div class="product-price">~$30</div>
   </div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/1250018285?tag=kneadfulthing-20">The New Artisan Bread in Five Minutes a Day</a></h4>
-    </div>
-    <div class="product-price">~$18</div>
-    <ul class="product-specs">
-      
-      <li>Topic: Master artisan bread techniques</li>
-      
-      <li>Features: Clear instructions, great photos</li>
-      
-      <li>Best for: Home bakers just starting out with little to no equipment</li>
-      
-    </ul>
-  </div>
-</div>
+</a>
 
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/160774273X?tag=kneadfulthing-20">Flour Water Salt Yeast by Ken Forkish</a></h4>
-    </div>
-    <div class="product-price">~$20</div>
-    <ul class="product-specs">
-      
-      <li>Topic: Master artisan bread techniques</li>
-      
-      <li>Features: Clear instructions, great photos</li>
-      
-      <li>Best for: Home bakers wanting professional results</li>
-      
-    </ul>
+<a class="product-card" href="https://amazon.com/dp/B005YR7EDC?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/cuisinart-mixing-bowls.jpg" alt="Cuisinart CTG-00-3MBR Stainless Mixing Bowls" />
+    
+    
   </div>
-</div>
-
-<div class="product-card">
-  
-  <div class="favorite-spacer"></div>
-  
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="https://amazon.com/dp/0393081087?tag=kneadfulthing-20">The Food Lab by J. Kenji López-Alt</a></h4>
-    </div>
+  <div class="product-info">
+    <h4>Cuisinart CTG-00-3MBR Stainless Mixing Bowls</h4>
     <div class="product-price">~$25</div>
-    <ul class="product-specs">
-      
-      <li>Topic: Food science and technique</li>
-      
-      <li>Features: Understand the "why" behind techniques</li>
-      
-      <li>Best for: Troubleshooting based on science</li>
-      
-    </ul>
   </div>
-</div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00LGLHUA0?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/pyrex-glass-mixing-bowl-set.jpg" alt="Pyrex Glass Mixing Bowl Set" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Pyrex Glass Mixing Bowl Set</h4>
+    <div class="product-price">~$20</div>
+  </div>
+</a>
 
 </div>
+
+</details>
+
+<details id="precision" class="product-section">
+<summary><h2>Precision Instruments</h2></summary>
+
+
+
+  
+<h3>Instant-Read Thermometers</h3>
+<p>Know when bread is truly done, verify water temperature.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B077LBQZPX?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/thermapen-one.jpg" alt="Thermapen ONE" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Thermapen ONE</h4>
+    <div class="product-price">~$100</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B01IHHLB3W?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/thermopro-tp03-budget-pick.jpg" alt="ThermoPro TP03 - Budget Pick" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>ThermoPro TP03 - Budget Pick</h4>
+    <div class="product-price">Under $15</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B01IEHKPI4?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/lavatools-javelin-pro.jpg" alt="Lavatools Javelin Pro Duo" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Lavatools Javelin Pro Duo</h4>
+    <div class="product-price">~$35</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B01GE77QT0?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/alpha-grillers-instant-read-thermometer.jpg" alt="Alpha Grillers Instant Read Thermometer" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Alpha Grillers Instant Read Thermometer</h4>
+    <div class="product-price">~$20</div>
+  </div>
+</a>
+
 </div>
 
-<h2 id="-money-saving-tips">💡 Money-Saving Tips</h2>
+  
+<h3>Oven Thermometers</h3>
+<p>Most ovens are off by 25-50°F. Know your real temperature.</p>
+<div class="product-grid">
 
-<ol>
-  <li><strong>Start with scale and thermometer</strong> - Biggest impact for least money</li>
-  <li><strong>Buy quality once</strong> - Good tools last decades</li>
-  <li><strong>Check warehouse stores</strong> - KitchenAid mixers often cheaper at Costco</li>
-  <li><strong>Watch for sales</strong> - Black Friday, post-holiday clearance</li>
-</ol>
+<a class="product-card" href="https://amazon.com/dp/B00004XSC7?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/taylor-classic-oven-thermometer.jpg" alt="Taylor Classic Oven Thermometer" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Taylor Classic Oven Thermometer</h4>
+    <div class="product-price">Under $10</div>
+  </div>
+</a>
 
-<h2 id="-shopping-strategy">🛒 Shopping Strategy</h2>
+<a class="product-card" href="https://amazon.com/dp/B001YG5UW4?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/kt-thermo-oven-thermometer.jpg" alt="KT THERMO Large Dial Oven Thermometer" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>KT THERMO Large Dial Oven Thermometer</h4>
+    <div class="product-price">~$10</div>
+  </div>
+</a>
 
-<p><strong>Beginner Setup (~$100):</strong></p>
-<ul>
-  <li>Digital scale ($15)</li>
-  <li>Instant-read thermometer ($15)</li>
-  <li>Bench scraper ($8)</li>
-  <li>Loaf pan ($12)</li>
-  <li>Oven thermometer ($8)</li>
-  <li>Dough whisk ($15)</li>
-  <li>Essential book ($20)</li>
-</ul>
+<a class="product-card" href="https://amazon.com/dp/B0000DJUYR?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/rubbermaid-commercial-oven-thermometer.jpg" alt="Rubbermaid Commercial Oven Thermometer" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Rubbermaid Commercial Oven Thermometer</h4>
+    <div class="product-price">~$14</div>
+  </div>
+</a>
 
-<p><strong>Intermediate Setup (~$300):</strong></p>
-<ul>
-  <li>Add stand mixer ($200)</li>
-  <li>Upgrade thermometer ($85)</li>
-  <li>Dutch oven ($60)</li>
-</ul>
+</div>
 
-<p><strong>Advanced Setup (~$600+):</strong></p>
-<ul>
-  <li>Premium thermometer ($100)</li>
-  <li>Pizza steel ($80)</li>
-  <li>Banneton set ($25)</li>
-  <li>Specialty tools as needed</li>
-</ul>
+</details>
 
-<h2 id="-questions">❓ Questions?</h2>
+<details id="baking" class="product-section">
+<summary><h2>Baking Vessels</h2></summary>
 
-<p>Not sure which tool is right for your needs? <a href="/contact/">Contact me</a> with details about:</p>
-<ul>
-  <li>Your baking frequency</li>
-  <li>Types of bread you make</li>
-  <li>Budget considerations</li>
-  <li>Kitchen space constraints</li>
-</ul>
 
-<p>I’ll help you choose the perfect tools for your baking journey!</p>
 
-<hr />
+  
+<h3>Loaf Pans</h3>
+<p>Even heating, easy release, perfect size.</p>
+<div class="product-grid">
 
-<p><em>Disclosure: This page contains Amazon affiliate links. When you purchase through these links, I earn a small commission at no extra cost to you. This helps support the site and allows me to continue providing detailed reviews and recommendations. I only recommend products I personally use and trust.</em></p>
+<a class="product-card" href="https://amazon.com/dp/B0029JQEIC?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/usa-pan-1-lb-loaf-pan-set-of-2.jpg" alt="USA Pan 1 lb Loaf Pan (Set of 2)" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>USA Pan 1 lb Loaf Pan (Set of 2)</h4>
+    <div class="product-price">~$25 for set</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00006JSUB?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/lodge-cast-iron-loaf-pan.jpg" alt="Lodge Cast Iron Loaf Pan" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Lodge Cast Iron Loaf Pan</h4>
+    <div class="product-price">~$35</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0000VLZF2?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/chicago-metallic-bread-pan.jpg" alt="Chicago Metallic Professional 1-lb Bread Pan" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Chicago Metallic Professional 1-lb Bread Pan</h4>
+    <div class="product-price">~$12</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0000CF6SI?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/wilton-loaf-pan.jpg" alt="Wilton Non-Stick Loaf Pan" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Wilton Non-Stick Loaf Pan</h4>
+    <div class="product-price">~$10</div>
+  </div>
+</a>
+
+</div>
+
+  
+<h3>Dutch Ovens</h3>
+<p>Creates professional steam environment for crusty bread.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B000N501BK?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/lodge-5-quart-dutch-oven.jpg" alt="Lodge 5-Quart Dutch Oven" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Lodge 5-Quart Dutch Oven</h4>
+    <div class="product-price">~$60</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00005QFSP?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/le-creuset-5-5-qt-dutch-oven.jpg" alt="Le Creuset 5.5-Qt Dutch Oven" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Le Creuset 5.5-Qt Dutch Oven</h4>
+    <div class="product-price">~$300+</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0007Y3ZDG?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/cuisinart-dutch-oven.jpg" alt="Cuisinart Chef's Classic Casserole" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Cuisinart Chef's Classic Casserole</h4>
+    <div class="product-price">~$70</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B07PPM7TYB?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/tramontina-dutch-oven.jpg" alt="Tramontina 6.5-Qt Dutch Oven" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Tramontina 6.5-Qt Dutch Oven</h4>
+    <div class="product-price">~$75</div>
+  </div>
+</a>
+
+</div>
+
+  
+<h3>Proofing Baskets</h3>
+<p>Support for the final rise, creates a beautiful crust pattern.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B078TBQZPX?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/wertioo-banneton-set.jpg" alt="WERTIOO Banneton Set" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>WERTIOO Banneton Set</h4>
+    <div class="product-price">~$25</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B000VKFLCC?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/frieling-oval-proofing-basket.jpg" alt="Frieling Oval Proofing Basket" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Frieling Oval Proofing Basket</h4>
+    <div class="product-price">~$20</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B07BG8HBMB?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/dotted-line-banneton.jpg" alt="Dotted Line Round Banneton 9-inch" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Dotted Line Round Banneton 9-inch</h4>
+    <div class="product-price">~$18</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00B5YJDUK?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/brotform-oval-basket.jpg" alt="Brotform Oval Proofing Basket with Liner" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Brotform Oval Proofing Basket with Liner</h4>
+    <div class="product-price">~$30</div>
+  </div>
+</a>
+
+</div>
+
+  
+<h3>Baking Mats &amp; Liners</h3>
+<p>Non-stick surface, even browning, reusable.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B00008T960?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/silpat-premium-non-stick-silicone-baking-mat.jpg" alt="Silpat Premium Non-Stick Silicone Baking Mat" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Silpat Premium Non-Stick Silicone Baking Mat</h4>
+    <div class="product-price">~$25</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00KBZL3LO?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/amazon-basics-silicone-mat.jpg" alt="AmazonBasics Silicone Baking Mat (2-Pack)" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>AmazonBasics Silicone Baking Mat (2-Pack)</h4>
+    <div class="product-price">~$12</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B001PQMJOM?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/reynolds-parchment-paper.jpg" alt="Reynolds Kitchens Parchment Paper Roll" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Reynolds Kitchens Parchment Paper Roll</h4>
+    <div class="product-price">~$8</div>
+  </div>
+</a>
+
+</div>
+
+</details>
+
+<details id="tools" class="product-section">
+<summary><h2>Hand Tools</h2></summary>
+
+
+
+  
+<h3>Bread Lames</h3>
+<p>Clean, controlled cuts for oven spring.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B07L5QQ7N8?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/emile-henry-bread-lame.jpg" alt="Emile Henry Bread Lame" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Emile Henry Bread Lame</h4>
+    <div class="product-price">~$20</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B004L4EING?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/double-edge-razor-blades-diy-alternative.jpg" alt="Double-Edge Razor Blades - DIY Alternative" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Double-Edge Razor Blades - DIY Alternative</h4>
+    <div class="product-price">Under $10</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B07MCWL6YN?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/bread-bosses-lame.jpg" alt="Bread Bosses Bread Lame Scoring Tool" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Bread Bosses Bread Lame Scoring Tool</h4>
+    <div class="product-price">~$15</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B07TGMKNJH?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/wire-monkey-lame.jpg" alt="Wire Monkey Firesong Bread Lame" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Wire Monkey Firesong Bread Lame</h4>
+    <div class="product-price">~$30</div>
+  </div>
+</a>
+
+</div>
+
+  
+<h3>Dough Whisks</h3>
+<p>Cuts through flour without overworking.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B000CPOJ0S?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/norpro-danish-dough-whisk.jpg" alt="Norpro Danish Dough Whisk" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Norpro Danish Dough Whisk</h4>
+    <div class="product-price">~$15</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B07BVVFYX5?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/oxo-dough-whisk.jpg" alt="OXO Good Grips Danish Dough Whisk" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>OXO Good Grips Danish Dough Whisk</h4>
+    <div class="product-price">~$12</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B07K8XGTBJ?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/zulay-dough-whisk.jpg" alt="Zulay Kitchen Danish Dough Whisk" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Zulay Kitchen Danish Dough Whisk</h4>
+    <div class="product-price">~$10</div>
+  </div>
+</a>
+
+</div>
+
+  
+<h3>Rolling Pins</h3>
+<p>Consistent thickness for flatbreads, crackers, and more.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B0000CFEXJ?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/jk-adams-rolling-pin.jpg" alt="J.K. Adams Maple French Rolling Pin" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>J.K. Adams Maple French Rolling Pin</h4>
+    <div class="product-price">~$25</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B003LNOPXW?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/joseph-joseph-rolling-pin.jpg" alt="Joseph Joseph Adjustable Rolling Pin" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Joseph Joseph Adjustable Rolling Pin</h4>
+    <div class="product-price">~$30</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B000RA22BU?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/fox-run-marble-rolling-pin.jpg" alt="Fox Run Marble Rolling Pin" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Fox Run Marble Rolling Pin</h4>
+    <div class="product-price">~$20</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0000DJUIS?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/ateco-rolling-pin.jpg" alt="Ateco Straight Rolling Pin" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Ateco Straight Rolling Pin</h4>
+    <div class="product-price">~$12</div>
+  </div>
+</a>
+
+</div>
+
+</details>
+
+<details id="specialty" class="product-section">
+<summary><h2>Pretzel Specialty</h2></summary>
+
+
+
+  
+<h3>Pretzel Essentials</h3>
+<p>Everything you need for authentic homemade soft pretzels.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B000H25HYY?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/coarse-pretzel-salt.jpg" alt="Coarse Pretzel Salt" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Coarse Pretzel Salt</h4>
+    <div class="product-price">~$8</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B000PYF8VM?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/arm-hammer-pure-baking-soda.jpg" alt="Arm &amp; Hammer Pure Baking Soda" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Arm &amp; Hammer Pure Baking Soda</h4>
+    <div class="product-price">~$3</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0D2147JTW?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/king-arthur-soft-pretzel-making-kit.jpg" alt="King Arthur Soft Pretzel Making Kit" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>King Arthur Soft Pretzel Making Kit</h4>
+    <div class="product-price">~$6</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B01MFABGLR?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/everything-but-the-bagel-seasoning.jpg" alt="Everything But The Bagel Seasoning" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Everything But The Bagel Seasoning</h4>
+    <div class="product-price">~$6</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B01N0I9YEQ?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/anthonys-malt-powder.jpg" alt="Anthony's Diastatic Dry Malt Powder" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Anthony's Diastatic Dry Malt Powder</h4>
+    <div class="product-price">~$12</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0000CFEXN?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/king-arthur-bread-flour.jpg" alt="King Arthur Bread Flour" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>King Arthur Bread Flour</h4>
+    <div class="product-price">~$10</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00017028M?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/maldon-sea-salt-flakes.jpg" alt="Maldon Sea Salt Flakes" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Maldon Sea Salt Flakes</h4>
+    <div class="product-price">~$8</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0082B9JGG?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/red-star-yeast.jpg" alt="Red Star Active Dry Yeast" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Red Star Active Dry Yeast</h4>
+    <div class="product-price">~$6</div>
+  </div>
+</a>
+
+</div>
+
+  
+<h3>Baking Steels &amp; Stones</h3>
+<p>Faster heat transfer for a better crust on bread and pizza.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B073W61MK1?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/dough-joe-pizza-steel.jpg" alt="Dough-Joe Pizza Steel" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Dough-Joe Pizza Steel</h4>
+    <div class="product-price">~$80</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00008GKDM?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/lodge-cast-iron-baking-pan.jpg" alt="Lodge Cast Iron Baking Pan" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Lodge Cast Iron Baking Pan</h4>
+    <div class="product-price">~$25</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0000E1HU8?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/old-stone-pizza-stone.jpg" alt="Old Stone Oven Pizza Stone" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Old Stone Oven Pizza Stone</h4>
+    <div class="product-price">~$45</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00FGRPXNA?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/nerdchef-steel-stone.jpg" alt="NerdChef Steel Baking Stone" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>NerdChef Steel Baking Stone</h4>
+    <div class="product-price">~$100</div>
+  </div>
+</a>
+
+</div>
+
+</details>
+
+<details id="reading" class="product-section">
+<summary><h2>Essential Reading</h2></summary>
+
+
+<p>The books that changed how I bake.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/1250018285?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/the-new-artisan-bread-in-five-minutes-a-day.jpg" alt="The New Artisan Bread in Five Minutes a Day" />
+    
+    <span class="personal-favorite-badge">My Pick</span>
+  </div>
+  <div class="product-info">
+    <h4>The New Artisan Bread in Five Minutes a Day</h4>
+    <div class="product-price">~$18</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/160774273X?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/flour-water-salt-yeast-by-ken-forkish.jpg" alt="Flour Water Salt Yeast by Ken Forkish" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Flour Water Salt Yeast by Ken Forkish</h4>
+    <div class="product-price">~$20</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/0393081087?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/the-food-lab-by-j-kenji-l-pez-alt.jpg" alt="The Food Lab by J. Kenji López-Alt" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>The Food Lab by J. Kenji López-Alt</h4>
+    <div class="product-price">~$25</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/1607742616?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/bread-bakers-apprentice.jpg" alt="The Bread Baker's Apprentice by Peter Reinhart" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>The Bread Baker's Apprentice by Peter Reinhart</h4>
+    <div class="product-price">~$22</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/0811870413?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/tartine-bread-by-chad-robertson.jpg" alt="Tartine Bread by Chad Robertson" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Tartine Bread by Chad Robertson</h4>
+    <div class="product-price">~$30</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/0593138422?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/the-perfect-loaf.jpg" alt="The Perfect Loaf by Maurizio Leo" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>The Perfect Loaf by Maurizio Leo</h4>
+    <div class="product-price">~$35</div>
+  </div>
+</a>
+
+</div>
+</details>
 
   </div>
 
@@ -847,6 +1125,9 @@
     </nav>
     <div class="footer-copyright">
       &copy;Copyright. All rights reserved.
+    </div>
+    <div class="footer-disclosure">
+      <small>This site contains affiliate links. I may earn a commission on qualifying purchases at no extra cost to you.</small>
     </div>
   </div>
 </footer></body>

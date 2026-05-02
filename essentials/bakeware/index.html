@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bakeware - Doughmain Logic</title>
+    <meta name="description" content="What started as an obsession with creating the perfect homemade beer soft pretzel has grown into a passion for all things dough. Discover the techniques, rec...">
+
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="canonical" href="https://doughmainlogic.com/essentials/bakeware/">
+
+    
+  </head>
+
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Doughmain Logic</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/">Home</a>
+          <a class="page-link" href="/about/">About</a>
+          <a class="page-link" href="#" onclick="alert('Blog coming soon! I\'m working on detailed reviews and tutorials. Stay tuned!'); return false;">Blog</a>
+          <div class="nav-dropdown" id="nav-tools-dropdown">
+            <input type="checkbox" id="tools-trigger" class="tools-trigger" />
+            <label for="tools-trigger" class="page-link tools-toggle">Tools <span class="dropdown-arrow">▾</span></label>
+            <div class="tools-menu" id="tools-menu">
+              <!-- Add tool links here -->
+              <a class="tools-link" href="/tools/desired-dough-temperature/">Water Temp Calculator</a>
+            </div>
+          </div>
+          <div class="nav-dropdown" id="nav-essentials-dropdown">
+            <input type="checkbox" id="essentials-trigger" class="tools-trigger" />
+            <label for="essentials-trigger" class="page-link tools-toggle">Essentials <span class="dropdown-arrow">▾</span></label>
+            <div class="tools-menu" id="essentials-menu">
+              <a class="tools-link" href="/essentials/tools/">Tools</a>
+              <a class="tools-link" href="/essentials/mixers/">Mixers</a>
+              <a class="tools-link" href="/essentials/bakeware/">Bakeware</a>
+              <a class="tools-link" href="/essentials/thermometers/">Thermometers</a>
+              <a class="tools-link" href="/essentials/ingredients/">Ingredients</a>
+              <a class="tools-link" href="/essentials/learning/">Learning</a>
+            </div>
+          </div>
+          <a class="page-link" href="/contact/">Contact</a>
+        </div>
+      </nav></div>
+</header>
+
+<script>
+(function() {
+  function initDropdown(dropdownId, menuId) {
+    var dropdown = document.getElementById(dropdownId);
+    var menu = document.getElementById(menuId);
+    var arrow = dropdown && dropdown.querySelector('.dropdown-arrow');
+    if (!dropdown || !menu) return;
+    if (window.innerWidth < 601) return;
+
+    var hideTimer;
+
+    function alignMenu() {
+      var nav = dropdown.closest('.site-nav');
+      if (nav) {
+        var navRect = nav.getBoundingClientRect();
+        var dropRect = dropdown.getBoundingClientRect();
+        menu.style.left = (dropRect.left - navRect.left) + 'px';
+      }
+    }
+
+    function openMenu() {
+      clearTimeout(hideTimer);
+      alignMenu();
+      menu.classList.add('is-open');
+      if (arrow) arrow.style.transform = 'rotate(180deg)';
+    }
+
+    function closeMenu() {
+      hideTimer = setTimeout(function() {
+        menu.classList.remove('is-open');
+        if (arrow) arrow.style.transform = '';
+      }, 200);
+    }
+
+    dropdown.addEventListener('mouseenter', openMenu);
+    dropdown.addEventListener('mouseleave', closeMenu);
+    menu.addEventListener('mouseenter', openMenu);
+    menu.addEventListener('mouseleave', closeMenu);
+  }
+
+  initDropdown('nav-tools-dropdown', 'tools-menu');
+  initDropdown('nav-essentials-dropdown', 'essentials-menu');
+})();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <div class="post-content">
+    <h1 id="bakeware">Bakeware</h1>
+
+<h2>Loaf Pans</h2>
+<p>Even heating, easy release, perfect size.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B0029JQEIC?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/usa-pan-1-lb-loaf-pan-set-of-2.jpg" alt="USA Pan 1 lb Loaf Pan (Set of 2)" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>USA Pan 1 lb Loaf Pan (Set of 2)</h4>
+    <div class="product-price">~$25 for set</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00006JSUB?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/lodge-cast-iron-loaf-pan.jpg" alt="Lodge Cast Iron Loaf Pan" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Lodge Cast Iron Loaf Pan</h4>
+    <div class="product-price">~$35</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0000VLZF2?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/chicago-metallic-bread-pan.jpg" alt="Chicago Metallic Professional 1-lb Bread Pan" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Chicago Metallic Professional 1-lb Bread Pan</h4>
+    <div class="product-price">~$12</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0000CF6SI?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/wilton-loaf-pan.jpg" alt="Wilton Non-Stick Loaf Pan" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Wilton Non-Stick Loaf Pan</h4>
+    <div class="product-price">~$10</div>
+  </div>
+</a>
+
+</div>
+
+<h2>Dutch Ovens</h2>
+<p>Creates professional steam environment for crusty bread.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B000N501BK?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/lodge-5-quart-dutch-oven.jpg" alt="Lodge 5-Quart Dutch Oven" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Lodge 5-Quart Dutch Oven</h4>
+    <div class="product-price">~$60</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00005QFSP?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/le-creuset-5-5-qt-dutch-oven.jpg" alt="Le Creuset 5.5-Qt Dutch Oven" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Le Creuset 5.5-Qt Dutch Oven</h4>
+    <div class="product-price">~$300+</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0007Y3ZDG?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/cuisinart-dutch-oven.jpg" alt="Cuisinart Chef's Classic Casserole" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Cuisinart Chef's Classic Casserole</h4>
+    <div class="product-price">~$70</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B07PPM7TYB?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/tramontina-dutch-oven.jpg" alt="Tramontina 6.5-Qt Dutch Oven" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Tramontina 6.5-Qt Dutch Oven</h4>
+    <div class="product-price">~$75</div>
+  </div>
+</a>
+
+</div>
+
+<h2>Proofing Baskets</h2>
+<p>Support for the final rise, creates a beautiful crust pattern.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B078TBQZPX?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/wertioo-banneton-set.jpg" alt="WERTIOO Banneton Set" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>WERTIOO Banneton Set</h4>
+    <div class="product-price">~$25</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B000VKFLCC?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/frieling-oval-proofing-basket.jpg" alt="Frieling Oval Proofing Basket" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Frieling Oval Proofing Basket</h4>
+    <div class="product-price">~$20</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B07BG8HBMB?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/dotted-line-banneton.jpg" alt="Dotted Line Round Banneton 9-inch" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Dotted Line Round Banneton 9-inch</h4>
+    <div class="product-price">~$18</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00B5YJDUK?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/brotform-oval-basket.jpg" alt="Brotform Oval Proofing Basket with Liner" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Brotform Oval Proofing Basket with Liner</h4>
+    <div class="product-price">~$30</div>
+  </div>
+</a>
+
+</div>
+
+<h2>Baking Mats &amp; Liners</h2>
+<p>Non-stick surface, even browning, reusable.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B00008T960?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/silpat-premium-non-stick-silicone-baking-mat.jpg" alt="Silpat Premium Non-Stick Silicone Baking Mat" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Silpat Premium Non-Stick Silicone Baking Mat</h4>
+    <div class="product-price">~$25</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00KBZL3LO?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/amazon-basics-silicone-mat.jpg" alt="AmazonBasics Silicone Baking Mat (2-Pack)" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>AmazonBasics Silicone Baking Mat (2-Pack)</h4>
+    <div class="product-price">~$12</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B001PQMJOM?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/reynolds-parchment-paper.jpg" alt="Reynolds Kitchens Parchment Paper Roll" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Reynolds Kitchens Parchment Paper Roll</h4>
+    <div class="product-price">~$8</div>
+  </div>
+</a>
+
+</div>
+
+<h2>Baking Steels &amp; Stones</h2>
+<p>Faster heat transfer for a better crust on bread and pizza.</p>
+<div class="product-grid">
+
+<a class="product-card" href="https://amazon.com/dp/B073W61MK1?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/dough-joe-pizza-steel.jpg" alt="Dough-Joe Pizza Steel" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Dough-Joe Pizza Steel</h4>
+    <div class="product-price">~$80</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00008GKDM?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/lodge-cast-iron-baking-pan.jpg" alt="Lodge Cast Iron Baking Pan" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Lodge Cast Iron Baking Pan</h4>
+    <div class="product-price">~$25</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B0000E1HU8?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/old-stone-pizza-stone.jpg" alt="Old Stone Oven Pizza Stone" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>Old Stone Oven Pizza Stone</h4>
+    <div class="product-price">~$45</div>
+  </div>
+</a>
+
+<a class="product-card" href="https://amazon.com/dp/B00FGRPXNA?tag=kneadfulthing-20">
+  <div class="product-image-wrap">
+    <img src="/assets/images/products/nerdchef-steel-stone.jpg" alt="NerdChef Steel Baking Stone" />
+    
+    
+  </div>
+  <div class="product-info">
+    <h4>NerdChef Steel Baking Stone</h4>
+    <div class="product-price">~$100</div>
+  </div>
+</a>
+
+</div>
+
+
+  </div>
+
+</article>
+      </div>
+    </main><footer class="site-footer">
+  <!-- Top section: Site info and social -->
+  <div class="footer-top">
+    <div class="footer-info">
+      <h3 class="footer-site-title">Doughmain Logic</h3>
+      <p class="footer-contact">Questions? <a href="/contact/">Get in touch</a></p>
+      <p class="footer-location">Mix it, Make it, Bake it</p>
+    </div>
+    <!-- <div class="footer-social">
+      <a href="https://pinterest.com/doughmainlogic/essential-bread-and-pretzel-supplies/" class="social-icon" target="_blank" rel="noopener" title="Follow on Pinterest">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C8.76,20.5 8.69,19.12 8.93,18.04L9.96,13.5C9.96,13.5 9.69,12.97 9.69,12.16C9.69,10.86 10.4,9.85 11.29,9.85C12.04,9.85 12.4,10.37 12.4,11.02C12.4,11.74 11.94,12.81 11.71,13.8C11.53,14.61 12.14,15.27 12.94,15.27C14.39,15.27 15.5,13.75 15.5,11.58C15.5,9.69 14.19,8.38 12.04,8.38C9.58,8.38 8.14,10.23 8.14,12.13C8.14,12.86 8.43,13.64 8.79,14.06C8.86,14.15 8.87,14.23 8.84,14.32L8.6,15.33C8.56,15.5 8.47,15.54 8.29,15.46C7.31,15 6.7,13.5 6.7,12.08C6.7,9.29 8.68,6.78 12.26,6.78C15.17,6.78 17.46,8.84 17.46,11.54C17.46,14.38 15.72,16.66 13.27,16.66C12.46,16.66 11.69,16.24 11.44,15.74L10.95,17.66C10.75,18.46 10.18,19.46 9.8,20.07C10.5,20.36 11.24,20.5 12,20.5A8.5,8.5 0 0,0 20.5,12A8.5,8.5 0 0,0 12,3.5Z"/>
+        </svg>
+      </a>
+     </div> -->
+     <!-- Not Ready for production yet -->
+  </div>
+
+  <!-- Bottom section: Navigation and copyright -->
+  <div class="footer-bottom">
+    <nav class="footer-nav">
+      <a href="/" class="footer-nav-link">HOME</a>
+      <a href="/about/" class="footer-nav-link">ABOUT</a>
+      <!-- <a href="#" class="footer-nav-link" onclick="alert('Blog coming soon! I\'m working on detailed reviews and tutorials. Stay tuned!'); return false;">BLOG</a> -->
+      <a href="/contact/" class="footer-nav-link">CONTACT</a>
+      <!-- <a href="/disclosure/" class="footer-nav-link">DISCLOSURE</a> -->
+      <a href="/privacy/" class="footer-nav-link">PRIVACY</a>
+    </nav>
+    <div class="footer-copyright">
+      &copy;Copyright. All rights reserved.
+    </div>
+    <div class="footer-disclosure">
+      <small>This site contains affiliate links. I may earn a commission on qualifying purchases at no extra cost to you.</small>
+    </div>
+  </div>
+</footer></body>
+
+</html>

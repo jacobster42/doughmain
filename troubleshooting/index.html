@@ -39,6 +39,18 @@
               <a class="tools-link" href="/tools/desired-dough-temperature/">Water Temp Calculator</a>
             </div>
           </div>
+          <div class="nav-dropdown" id="nav-essentials-dropdown">
+            <input type="checkbox" id="essentials-trigger" class="tools-trigger" />
+            <label for="essentials-trigger" class="page-link tools-toggle">Essentials <span class="dropdown-arrow">▾</span></label>
+            <div class="tools-menu" id="essentials-menu">
+              <a class="tools-link" href="/essentials/tools/">Tools</a>
+              <a class="tools-link" href="/essentials/mixers/">Mixers</a>
+              <a class="tools-link" href="/essentials/bakeware/">Bakeware</a>
+              <a class="tools-link" href="/essentials/thermometers/">Thermometers</a>
+              <a class="tools-link" href="/essentials/ingredients/">Ingredients</a>
+              <a class="tools-link" href="/essentials/learning/">Learning</a>
+            </div>
+          </div>
           <a class="page-link" href="/contact/">Contact</a>
         </div>
       </nav></div>
@@ -46,33 +58,46 @@
 
 <script>
 (function() {
-  var dropdown = document.getElementById('nav-tools-dropdown');
-  var menu = document.getElementById('tools-menu');
-  var arrow = dropdown && dropdown.querySelector('.dropdown-arrow');
-  if (!dropdown || !menu) return;
+  function initDropdown(dropdownId, menuId) {
+    var dropdown = document.getElementById(dropdownId);
+    var menu = document.getElementById(menuId);
+    var arrow = dropdown && dropdown.querySelector('.dropdown-arrow');
+    if (!dropdown || !menu) return;
+    if (window.innerWidth < 601) return;
 
-  // Mobile uses the checkbox; desktop uses JS hover
-  if (window.innerWidth < 601) return;
+    var hideTimer;
 
-  var hideTimer;
+    function alignMenu() {
+      var nav = dropdown.closest('.site-nav');
+      if (nav) {
+        var navRect = nav.getBoundingClientRect();
+        var dropRect = dropdown.getBoundingClientRect();
+        menu.style.left = (dropRect.left - navRect.left) + 'px';
+      }
+    }
 
-  function openMenu() {
-    clearTimeout(hideTimer);
-    menu.classList.add('is-open');
-    if (arrow) arrow.style.transform = 'rotate(180deg)';
+    function openMenu() {
+      clearTimeout(hideTimer);
+      alignMenu();
+      menu.classList.add('is-open');
+      if (arrow) arrow.style.transform = 'rotate(180deg)';
+    }
+
+    function closeMenu() {
+      hideTimer = setTimeout(function() {
+        menu.classList.remove('is-open');
+        if (arrow) arrow.style.transform = '';
+      }, 200);
+    }
+
+    dropdown.addEventListener('mouseenter', openMenu);
+    dropdown.addEventListener('mouseleave', closeMenu);
+    menu.addEventListener('mouseenter', openMenu);
+    menu.addEventListener('mouseleave', closeMenu);
   }
 
-  function closeMenu() {
-    hideTimer = setTimeout(function() {
-      menu.classList.remove('is-open');
-      if (arrow) arrow.style.transform = '';
-    }, 200);
-  }
-
-  dropdown.addEventListener('mouseenter', openMenu);
-  dropdown.addEventListener('mouseleave', closeMenu);
-  menu.addEventListener('mouseenter', openMenu);
-  menu.addEventListener('mouseleave', closeMenu);
+  initDropdown('nav-tools-dropdown', 'tools-menu');
+  initDropdown('nav-essentials-dropdown', 'essentials-menu');
 })();
 </script>
 <main class="page-content" aria-label="Content">
@@ -312,6 +337,9 @@
     </nav>
     <div class="footer-copyright">
       &copy;Copyright. All rights reserved.
+    </div>
+    <div class="footer-disclosure">
+      <small>This site contains affiliate links. I may earn a commission on qualifying purchases at no extra cost to you.</small>
     </div>
   </div>
 </footer></body>
