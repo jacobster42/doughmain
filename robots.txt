@@ -1,1 +1,2 @@
-Sitemap: https://doughmainlogic.com/sitemap.xml
+User-agent: *
+Disallow:
