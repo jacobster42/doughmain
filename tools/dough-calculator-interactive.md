@@ -86,8 +86,38 @@ permalink: /tools/desired-dough-temperature/
   <h3>Learn More</h3>
   <a href="https://www.kingarthurbaking.com/blog/2018/05/29/desired-dough-temperature" target="_blank">Why does dough temperature matter?</a>
 
-<h3>Products that help</h3>
+<h3 class="products-heading">Products that Help</h3>
+<p class="products-subhead">Tools worth having when precision matters.</p>
 
+<div class="product-cards">
+
+  <a class="product-card" href="https://amzn.to/4ubK6oJ" target="_blank" rel="nofollow sponsored noopener">
+    <div class="product-card-body">
+      <h4 class="product-name">ThermoWorks Thermapen ONE</h4>
+      <p class="product-desc">The gold standard instant-read thermometer for measuring flour, water, and room temps in seconds.</p>
+    </div>
+    <!-- <span class="product-btn">View on Amazon</span> -->
+  </a>
+
+  <a class="product-card" href="https://amzn.to/4bazIVd" target="_blank" rel="nofollow sponsored noopener">
+    <div class="product-card-body">
+      <h4 class="product-name">Cambro 6-Qt Dough Container</h4>
+      <p class="product-desc">A clear, graduated dough bucket used by professionals to track bulk fermentation.</p>
+    </div>
+    <!-- <span class="product-btn">View on Amazon</span> -->
+  </a>
+
+  <a class="product-card" href="https://amzn.to/4uhihLE" target="_blank" rel="nofollow sponsored noopener">
+    <div class="product-card-body">
+      <h4 class="product-name">Pyrex Glass Measuring Cup</h4>
+      <p class="product-desc">Heat-safe glass with a clear spout — ideal for adding water at the exact temperature you need.</p>
+    </div>
+    <!-- <span class="product-btn">View on Amazon</span> -->
+  </a>
+
+</div>
+
+<p class="affiliate-note">As an Amazon Associate I earn a small percentage from qualifying purchases, which helps me maintain this website and provide content.</p>
 
 </section>
 
@@ -240,10 +270,103 @@ permalink: /tools/desired-dough-temperature/
     margin-top: 0.5rem;
   }
 
+  /* Products section */
+  .products-heading {
+    font-size: 1.1rem !important;
+    margin: 1.75rem 0 0.25rem !important;
+    color: #334155;
+  }
+
+  .products-subhead {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin: 0 0 1rem;
+  }
+
+  .product-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    align-items: stretch;
+  }
+
+  .calculator .product-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #fafafa;
+    box-shadow: none;
+    overflow: visible;
+    min-height: 0;
+    position: static;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transform: none;
+    transition: border-color 0.15s, background 0.15s;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .calculator .product-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #8C6D46;
+    background: #f5f0eb;
+  }
+
+  .product-card-body {
+    padding: 0.75rem 0.75rem 0.5rem;
+    flex: 1;
+  }
+
+  .calculator .product-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 0.35rem;
+    line-height: 1.3;
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+    letter-spacing: 0;
+  }
+
+  .product-desc {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .product-btn {
+    display: block;
+    margin: 0.6rem 0.75rem 0.75rem;
+    padding: 0.35rem 0;
+    text-align: center;
+    background: #4A3728;
+    color: #F7F4EF !important;
+    border-radius: 5px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: background 0.15s;
+  }
+
+  .product-btn:hover { background: #8C6D46; }
+
+  .affiliate-note {
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    margin: 0;
+  }
+
   @media (max-width: 600px) {
     .grid { grid-template-columns: 1fr; }
     #preWrap { grid-template-columns: 1fr !important; }
     .result-value { font-size: 2rem; }
+    .product-cards { grid-template-columns: 1fr; }
   }
 </style>
 

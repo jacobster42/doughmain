@@ -6,274 +6,166 @@ permalink: /essentials/
 
 # Essential Baking Tools & Equipment
 
-After years of testing and countless loaves, these are the tools that consistently deliver professional results in a home kitchen. Each recommendation is battle-tested and chosen for reliability, accuracy, and value.
+After years of testing and countless loaves, these are the tools that consistently deliver professional results in a home kitchen. Each recommendation is chosen for reliability, accuracy, and value.
 
-*This page contains affiliate links. When you purchase through these links, you help support this site at no extra cost to you.*
+<div class="section-cards">
+  {% for section in site.data.products.sections %}
+  {% assign s = section[1] %}
+  <a class="section-card" href="#{{ s.id }}" onclick="var el=document.getElementById('{{ s.id }}');if(el){el.open=true;}">
+    <div class="section-card-title">{{ s.title }}</div>
+    <div class="section-card-desc">{{ s.description }}</div>
+  </a>
+  {% endfor %}
+</div>
 
-**Important Note:** While I haven't necessarily used the exact models listed below, I have extensive experience with all of these product categories and find them essential for getting started and making quality baked doughs. These specific models are highly-rated options that represent the best value in each category. I plan to update this page with my actual gear as I document the specific models I use.
+<details id="must-haves" class="product-section">
+<summary><h2>The Must-Haves</h2></summary>
 
-<div class="product-section">
-<h2>🏆 The Must-Haves</h2>
-
-{% assign must_haves = "kitchen_scales,stand_mixers,bench_scrapers" | split: "," %}
+{% assign must_haves = "kitchen_scales,stand_mixers,bench_scrapers,mixing_bowls" | split: "," %}
 {% for category_key in must_haves %}
   {% assign category = site.data.products.categories[category_key] %}
-
 <h3>{{ category.title }}</h3>
-<p><strong>Why you need it:</strong> {{ category.description }}</p>
-
+<p>{{ category.description }}</p>
 <div class="product-grid">
 {% for product in category.products %}
-<div class="product-card">
-  {% if product.personal_favorite %}
-  <div class="personal-favorite-badge">
-    ✅ <strong>Personal Favorite</strong> - {{ product.personal_experience }}
+<a class="product-card" href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">
+  <div class="product-image-wrap">
+    {% if product.image %}<img src="{{ product.image }}" alt="{{ product.name }}">
+    {% else %}<div class="product-image-placeholder">&#9744;</div>{% endif %}
+    {% if product.personal_favorite %}<span class="personal-favorite-badge">My Pick</span>{% endif %}
   </div>
-  {% else %}
-  <div class="favorite-spacer"></div>
-  {% endif %}
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">{{ product.name }}</a></h4>
-    </div>
-    <div class="product-price">{{ product.price }}</div>
-    <ul class="product-specs">
-      {% for spec in product.specs %}
-      <li>{{ spec }}</li>
-      {% endfor %}
-    </ul>
+  <div class="product-info">
+    <h4>{{ product.name }}</h4>
+    {% if product.price != "" %}<div class="product-price">{{ product.price }}</div>{% endif %}
   </div>
-</div>
+</a>
 {% endfor %}
 </div>
-
 {% endfor %}
-</div>
+</details>
 
-<div class="product-section">
-<h2>🌡️ Precision Instruments</h2>
+<details id="precision" class="product-section">
+<summary><h2>Precision Instruments</h2></summary>
 
 {% assign precision = "thermometers,oven_thermometers" | split: "," %}
 {% for category_key in precision %}
   {% assign category = site.data.products.categories[category_key] %}
-
 <h3>{{ category.title }}</h3>
-<p><strong>Why you need it:</strong> {{ category.description }}</p>
-
+<p>{{ category.description }}</p>
 <div class="product-grid">
 {% for product in category.products %}
-<div class="product-card">
-  {% if product.personal_favorite %}
-  <div class="personal-favorite-badge">
-    ✅ <strong>Personal Favorite</strong> - {{ product.personal_experience }}
+<a class="product-card" href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">
+  <div class="product-image-wrap">
+    {% if product.image %}<img src="{{ product.image }}" alt="{{ product.name }}">
+    {% else %}<div class="product-image-placeholder">&#9744;</div>{% endif %}
+    {% if product.personal_favorite %}<span class="personal-favorite-badge">My Pick</span>{% endif %}
   </div>
-  {% else %}
-  <div class="favorite-spacer"></div>
-  {% endif %}
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">{{ product.name }}</a></h4>
-    </div>
-    <div class="product-price">{{ product.price }}</div>
-    <ul class="product-specs">
-      {% for spec in product.specs %}
-      <li>{{ spec }}</li>
-      {% endfor %}
-    </ul>
+  <div class="product-info">
+    <h4>{{ product.name }}</h4>
+    {% if product.price != "" %}<div class="product-price">{{ product.price }}</div>{% endif %}
   </div>
-</div>
+</a>
 {% endfor %}
 </div>
-
 {% endfor %}
-</div>
+</details>
 
-<div class="product-section">
-<h2>🍞 Baking Essentials</h2>
+<details id="baking" class="product-section">
+<summary><h2>Baking Vessels</h2></summary>
 
-{% assign baking = "loaf_pans,dutch_ovens,proofing_baskets" | split: "," %}
+{% assign baking = "loaf_pans,dutch_ovens,proofing_baskets,baking_mats" | split: "," %}
 {% for category_key in baking %}
   {% assign category = site.data.products.categories[category_key] %}
-
 <h3>{{ category.title }}</h3>
-<p><strong>Why these specific ones:</strong> {{ category.description }}</p>
-
+<p>{{ category.description }}</p>
 <div class="product-grid">
 {% for product in category.products %}
-<div class="product-card">
-  {% if product.personal_favorite %}
-  <div class="personal-favorite-badge">
-    ✅ <strong>Personal Favorite</strong> - {{ product.personal_experience }}
+<a class="product-card" href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">
+  <div class="product-image-wrap">
+    {% if product.image %}<img src="{{ product.image }}" alt="{{ product.name }}">
+    {% else %}<div class="product-image-placeholder">&#9744;</div>{% endif %}
+    {% if product.personal_favorite %}<span class="personal-favorite-badge">My Pick</span>{% endif %}
   </div>
-  {% else %}
-  <div class="favorite-spacer"></div>
-  {% endif %}
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">{{ product.name }}</a></h4>
-    </div>
-    <div class="product-price">{{ product.price }}</div>
-    <ul class="product-specs">
-      {% for spec in product.specs %}
-      <li>{{ spec }}</li>
-      {% endfor %}
-    </ul>
+  <div class="product-info">
+    <h4>{{ product.name }}</h4>
+    {% if product.price != "" %}<div class="product-price">{{ product.price }}</div>{% endif %}
   </div>
-</div>
+</a>
 {% endfor %}
 </div>
-
 {% endfor %}
-</div>
+</details>
 
-<div class="product-section">
-<h2>🔪 Precision Tools</h2>
+<details id="tools" class="product-section">
+<summary><h2>Hand Tools</h2></summary>
 
-{% assign precision_tools = "bread_lames,dough_whisks" | split: "," %}
-{% for category_key in precision_tools %}
+{% assign hand_tools = "bread_lames,dough_whisks,rolling_pins" | split: "," %}
+{% for category_key in hand_tools %}
   {% assign category = site.data.products.categories[category_key] %}
-
 <h3>{{ category.title }}</h3>
-<p><strong>Why you need it:</strong> {{ category.description }}</p>
-
+<p>{{ category.description }}</p>
 <div class="product-grid">
 {% for product in category.products %}
-<div class="product-card">
-  {% if product.personal_favorite %}
-  <div class="personal-favorite-badge">
-    ✅ <strong>Personal Favorite</strong> - {{ product.personal_experience }}
+<a class="product-card" href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">
+  <div class="product-image-wrap">
+    {% if product.image %}<img src="{{ product.image }}" alt="{{ product.name }}">
+    {% else %}<div class="product-image-placeholder">&#9744;</div>{% endif %}
+    {% if product.personal_favorite %}<span class="personal-favorite-badge">My Pick</span>{% endif %}
   </div>
-  {% else %}
-  <div class="favorite-spacer"></div>
-  {% endif %}
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">{{ product.name }}</a></h4>
-    </div>
-    <div class="product-price">{{ product.price }}</div>
-    <ul class="product-specs">
-      {% for spec in product.specs %}
-      <li>{{ spec }}</li>
-      {% endfor %}
-    </ul>
+  <div class="product-info">
+    <h4>{{ product.name }}</h4>
+    {% if product.price != "" %}<div class="product-price">{{ product.price }}</div>{% endif %}
   </div>
-</div>
+</a>
 {% endfor %}
 </div>
-
 {% endfor %}
-</div>
+</details>
 
-<div class="product-section">
-<h2>🥨 Specialty Items</h2>
+<details id="specialty" class="product-section">
+<summary><h2>Pretzel Specialty</h2></summary>
 
 {% assign specialty = "pretzel_essentials,pizza_steel" | split: "," %}
 {% for category_key in specialty %}
   {% assign category = site.data.products.categories[category_key] %}
-
 <h3>{{ category.title }}</h3>
-<p><strong>{{ category.description }}</strong></p>
-
+<p>{{ category.description }}</p>
 <div class="product-grid">
 {% for product in category.products %}
-<div class="product-card">
-  {% if product.personal_favorite %}
-  <div class="personal-favorite-badge">
-    ✅ <strong>Personal Favorite</strong> - {{ product.personal_experience }}
+<a class="product-card" href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">
+  <div class="product-image-wrap">
+    {% if product.image %}<img src="{{ product.image }}" alt="{{ product.name }}">
+    {% else %}<div class="product-image-placeholder">&#9744;</div>{% endif %}
+    {% if product.personal_favorite %}<span class="personal-favorite-badge">My Pick</span>{% endif %}
   </div>
-  {% else %}
-  <div class="favorite-spacer"></div>
-  {% endif %}
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">{{ product.name }}</a></h4>
-    </div>
-    <div class="product-price">{{ product.price }}</div>
-    <ul class="product-specs">
-      {% for spec in product.specs %}
-      <li>{{ spec }}</li>
-      {% endfor %}
-    </ul>
+  <div class="product-info">
+    <h4>{{ product.name }}</h4>
+    {% if product.price != "" %}<div class="product-price">{{ product.price }}</div>{% endif %}
   </div>
-</div>
+</a>
 {% endfor %}
 </div>
-
 {% endfor %}
-</div>
+</details>
 
-<div class="product-section">
-<h2>📚 Knowledge is Power</h2>
+<details id="reading" class="product-section">
+<summary><h2>Essential Reading</h2></summary>
 
 {% assign category = site.data.products.categories.essential_reading %}
-
-<h3>{{ category.title }}</h3>
-
+<p>{{ category.description }}</p>
 <div class="product-grid">
 {% for product in category.products %}
-<div class="product-card">
-  {% if product.personal_favorite %}
-  <div class="personal-favorite-badge">
-    ✅ <strong>Personal Favorite</strong> - {{ product.personal_experience }}
+<a class="product-card" href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">
+  <div class="product-image-wrap">
+    {% if product.image %}<img src="{{ product.image }}" alt="{{ product.name }}">
+    {% else %}<div class="product-image-placeholder">&#9744;</div>{% endif %}
+    {% if product.personal_favorite %}<span class="personal-favorite-badge">My Pick</span>{% endif %}
   </div>
-  {% else %}
-  <div class="favorite-spacer"></div>
-  {% endif %}
-  <div class="product-details">
-    <div class="product-title">
-      <h4><a href="{{ site.data.products.base_amazon_url }}{{ product.asin }}?tag={{ site.data.products.affiliate_tag }}">{{ product.name }}</a></h4>
-    </div>
-    <div class="product-price">{{ product.price }}</div>
-    <ul class="product-specs">
-      {% for spec in product.specs %}
-      <li>{{ spec }}</li>
-      {% endfor %}
-    </ul>
+  <div class="product-info">
+    <h4>{{ product.name }}</h4>
+    {% if product.price != "" %}<div class="product-price">{{ product.price }}</div>{% endif %}
   </div>
-</div>
+</a>
 {% endfor %}
 </div>
-</div>
-
-## 💡 Money-Saving Tips
-
-1. **Start with scale and thermometer** - Biggest impact for least money
-2. **Buy quality once** - Good tools last decades
-3. **Check warehouse stores** - KitchenAid mixers often cheaper at Costco
-4. **Watch for sales** - Black Friday, post-holiday clearance
-
-## 🛒 Shopping Strategy
-
-**Beginner Setup (~$100):**
-- Digital scale ($15)
-- Instant-read thermometer ($15)
-- Bench scraper ($8)
-- Loaf pan ($12)
-- Oven thermometer ($8)
-- Dough whisk ($15)
-- Essential book ($20)
-
-**Intermediate Setup (~$300):**
-- Add stand mixer ($200)
-- Upgrade thermometer ($85)
-- Dutch oven ($60)
-
-**Advanced Setup (~$600+):**
-- Premium thermometer ($100)
-- Pizza steel ($80)
-- Banneton set ($25)
-- Specialty tools as needed
-
-## ❓ Questions?
-
-Not sure which tool is right for your needs? [Contact me](/contact/) with details about:
-- Your baking frequency
-- Types of bread you make
-- Budget considerations
-- Kitchen space constraints
-
-I'll help you choose the perfect tools for your baking journey!
-
----
-
-*Disclosure: This page contains Amazon affiliate links. When you purchase through these links, I earn a small commission at no extra cost to you. This helps support the site and allows me to continue providing detailed reviews and recommendations. I only recommend products I personally use and trust.*
+</details>

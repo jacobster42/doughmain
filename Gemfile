@@ -4,6 +4,8 @@ gem "jekyll", "~> 4.3"
 gem "minima", "~> 2.5"
 gem "webrick"
 gem "jekyll-feed"
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"
 gem "jekyll-sass-converter", "~> 2.2"
 gem "sassc", "~> 2.4"
 

@@ -1,294 +1,495 @@
 categories:
   kitchen_scales:
-    title: "Kitchen Scale - Digital Precision"
-    description: "Baking is chemistry. Volume measurements vary; weight doesn't."
+    title: Kitchen Scales
+    description: Baking is chemistry. Volume measurements vary; weight doesn't.
     products:
-      - name: "Ozeri ZK12-R Pronto Digital Kitchen Scale"
-        asin: "B01H5ZRRJE"
-        price: "~$15"
-        specs:
-          - "Capacity: 12 lbs (perfect for large batches)"
-          - "Precision: 0.05 oz accuracy"
-          - "Features: Ultra-thin design, large platform, automatic shut-off"
-          - "Price: ~$15"
-        personal_favorite: true
-        personal_experience: "I use this exact model daily"
-
-      - name: "Etekcity Digital Kitchen Scale"
-        asin: "B0113UZJE2"
-        price: "~$15"
-        specs:
-          - "Great starter scale under $15"
-          - "11 lb capacity, 0.1 oz precision"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: Ozeri ZK12-R Pronto Digital Kitchen Scale
+      asin: B01H5ZRRJE
+      price: ~$15
+      personal_favorite: true
+      personal_experience: I use this exact model daily
+      image: /assets/images/products/ozeri-zk12-r-pronto-digital-kitchen-scale.jpg
+    - name: Etekcity Digital Kitchen Scale
+      asin: B0113UZJE2
+      price: ~$15
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/etekcity-digital-kitchen-scale.jpg
+    - name: OXO Good Grips 11 lb Food Scale
+      asin: B079C4Y9P2
+      price: ~$50
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/oxo-good-grips-11-lb-food-scale.jpg
+    - name: My Weigh KD-8000 Baker's Scale
+      asin: B002SVRCEK
+      price: ~$55
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/my-weigh-kd-8000-bakers-scale.jpg
   stand_mixers:
-    title: "Stand Mixer - The Workhorse"
-    description: "Consistent kneading, handles heavy doughs, frees your hands."
+    title: Stand Mixers
+    description: Consistent kneading, handles heavy doughs, frees your hands.
     products:
-      - name: "KitchenAid Artisan 5-Qt Stand Mixer"
-        asin: "B00005UP2P"
-        price: "~$300-400"
-        specs:
-          - "Motor: 325-watt (handles most bread doughs)"
-          - "Capacity: 5 quarts (2 large loaves)"
-          - "Attachments: Includes dough hook, whisk, paddle"
-          - "Durability: Built to last decades"
-          - "Price: ~$300-400"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
-      - name: "KitchenAid Professional 6-Qt"
-        asin: "B00063ULMI"
-        price: "~$400-500"
-        specs:
-          - "575-watt motor for frequent baking"
-          - "6-quart capacity for large families"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: KitchenAid Artisan 5-Qt Stand Mixer
+      asin: B00005UP2P
+      price: ~$300-400
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/kitchenaid-artisan-5-qt-stand-mixer.jpg
+    - name: KitchenAid Professional 6-Qt
+      asin: B00063ULMI
+      price: ~$400-500
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/kitchenaid-professional-6-qt.jpg
+    - name: Cuisinart SM-50 5.5-Qt Stand Mixer
+      asin: B00IOTSAQY
+      price: ~$200
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/cuisinart-sm-50-stand-mixer.jpg
+    - name: KitchenAid Dough Hook Attachment
+      asin: B00004OCNJ
+      price: ~$20
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/kitchenaid-dough-hook-attachment.jpg
   bench_scrapers:
-    title: "Bench Scraper - The Unsung Hero"
-    description: "Dough handling, portioning, cleaning - does everything."
+    title: Bench Scrapers
+    description: Dough handling, portioning, cleaning - does everything.
     products:
-      - name: "Amazon Basics Multi-Purpose Stainless Steel Scraper/Chopper"
-        asin: "B07255T6SW"
-        price: "~$8"
-        specs:
-          - "Material: Stainless steel with contoured grip handle"
-          - "Size: 6-inch blade perfect for most tasks"
-          - "Features: Rounded corners, ergonomic black handle, built-in ruler"
-          - "Uses: Cutting dough, chopping vegetables, scraping surfaces"
-          - "Price: ~$8"
-        personal_favorite: true
-        personal_experience: "Built-in ruler is helpful when making pretzel bites"
-
+    - name: Amazon Basics Stainless Steel Scraper
+      asin: B07255T6SW
+      price: ~$8
+      personal_favorite: true
+      personal_experience: Built-in ruler is helpful when making pretzel bites
+      image: /assets/images/products/amazon-basics-stainless-steel-scraper.jpg
+    - name: OXO Good Grips Bench Scraper
+      asin: B00004OCLT
+      price: ~$12
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/oxo-good-grips-bench-scraper.jpg
+    - name: Plastic Bowl Scraper (Set of 2)
+      asin: B001EO5Q6I
+      price: ~$7
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/plastic-bowl-scraper.jpg
+    - name: Ateco 1355 Flexible Bowl Scraper
+      asin: B0000VLZJW
+      price: ~$5
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/ateco-bowl-scraper.jpg
+  mixing_bowls:
+    title: Mixing Bowls
+    description: The right bowl makes mixing easier and cleanup faster.
+    products:
+    - name: OXO Good Grips 3-Piece Mixing Bowl Set
+      asin: B00004OCNK
+      price: ~$30
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/oxo-good-grips-3-piece-mixing-bowl-set.jpg
+    - name: Cuisinart CTG-00-3MBR Stainless Mixing Bowls
+      asin: B005YR7EDC
+      price: ~$25
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/cuisinart-mixing-bowls.jpg
+    - name: Pyrex Glass Mixing Bowl Set
+      asin: B00LGLHUA0
+      price: ~$20
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/pyrex-glass-mixing-bowl-set.jpg
   thermometers:
-    title: "Instant-Read Thermometer"
-    description: "Know when bread is truly done, verify water temperature."
+    title: Instant-Read Thermometers
+    description: Know when bread is truly done, verify water temperature.
     products:
-      - name: "Thermapen ONE"
-        asin: "B077LBQZPX"
-        price: "~$100"
-        specs:
-          - "Speed: 1-second readings"
-          - "Accuracy: ±0.5°F"
-          - "Range: -58°F to 572°F"
-          - "Waterproof: IPX7 rated"
-          - "Price: ~$100 (worth every penny)"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
-      - name: "ThermoPro TP03 - Budget Pick"
-        asin: "B01IHHLB3W"
-        price: "Under $15"
-        specs:
-          - "3-4 second readings"
-          - "±1.8°F accuracy"
-          - "Under $15"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: Thermapen ONE
+      asin: B077LBQZPX
+      price: ~$100
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/thermapen-one.jpg
+    - name: ThermoPro TP03 - Budget Pick
+      asin: B01IHHLB3W
+      price: Under $15
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/thermopro-tp03-budget-pick.jpg
+    - name: Lavatools Javelin Pro Duo
+      asin: B01IEHKPI4
+      price: ~$35
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/lavatools-javelin-pro.jpg
+    - name: Alpha Grillers Instant Read Thermometer
+      asin: B01GE77QT0
+      price: ~$20
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/alpha-grillers-instant-read-thermometer.jpg
   oven_thermometers:
-    title: "Oven Thermometer"
-    description: "Most ovens are off by 25-50°F. Know your real temperature."
+    title: Oven Thermometers
+    description: Most ovens are off by 25-50°F. Know your real temperature.
     products:
-      - name: "Taylor Classic Oven Thermometer"
-        asin: "B00004XSC7"
-        price: "Under $10"
-        specs:
-          - "Large, easy-to-read dial"
-          - "Hangs on oven rack"
-          - "±25°F accuracy"
-          - "Under $10"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: Taylor Classic Oven Thermometer
+      asin: B00004XSC7
+      price: Under $10
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/taylor-classic-oven-thermometer.jpg
+    - name: KT THERMO Large Dial Oven Thermometer
+      asin: B001YG5UW4
+      price: ~$10
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/kt-thermo-oven-thermometer.jpg
+    - name: Rubbermaid Commercial Oven Thermometer
+      asin: B0000DJUYR
+      price: ~$14
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/rubbermaid-commercial-oven-thermometer.jpg
   loaf_pans:
-    title: "Loaf Pans - Quality Matters"
-    description: "Even heating, easy release, perfect size."
+    title: Loaf Pans
+    description: Even heating, easy release, perfect size.
     products:
-      - name: "USA Pan 1 lb Loaf Pan (Set of 2)"
-        asin: "B0029JQEIC"
-        price: "~$25 for set"
-        specs:
-          - "Material: Aluminized steel with nonstick coating"
-          - "Size: 8.5\" x 4.5\" (standard 1 lb loaf)"
-          - "Features: Even browning, easy release"
-          - "Made in USA"
-          - "Price: ~$25 for set"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
-      - name: "Lodge Cast Iron Loaf Pan"
-        asin: "B00006JSUB"
-        price: "~$35"
-        specs:
-          - "Superior heat retention"
-          - "Creates incredible crust"
-          - "Lasts forever"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: USA Pan 1 lb Loaf Pan (Set of 2)
+      asin: B0029JQEIC
+      price: ~$25 for set
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/usa-pan-1-lb-loaf-pan-set-of-2.jpg
+    - name: Lodge Cast Iron Loaf Pan
+      asin: B00006JSUB
+      price: ~$35
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/lodge-cast-iron-loaf-pan.jpg
+    - name: Chicago Metallic Professional 1-lb Bread Pan
+      asin: B0000VLZF2
+      price: ~$12
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/chicago-metallic-bread-pan.jpg
+    - name: Wilton Non-Stick Loaf Pan
+      asin: B0000CF6SI
+      price: ~$10
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/wilton-loaf-pan.jpg
   dutch_ovens:
-    title: "Dutch Oven - Artisan Bread Secret"
-    description: "Creates professional steam environment for crusty bread."
+    title: Dutch Ovens
+    description: Creates professional steam environment for crusty bread.
     products:
-      - name: "Lodge 5-Quart Dutch Oven"
-        asin: "B000N501BK"
-        price: "~$60"
-        specs:
-          - "Material: Pre-seasoned cast iron"
-          - "Size: Perfect for 1-2 lb loaves"
-          - "Versatility: Bread, soups, roasts"
-          - "Price: ~$60"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
-      - name: "Le Creuset 5.5-Qt Dutch Oven"
-        asin: "B00005QFSP"
-        price: "~$300+"
-        specs:
-          - "No seasoning required"
-          - "Beautiful colors"
-          - "Premium price point"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: Lodge 5-Quart Dutch Oven
+      asin: B000N501BK
+      price: ~$60
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/lodge-5-quart-dutch-oven.jpg
+    - name: Le Creuset 5.5-Qt Dutch Oven
+      asin: B00005QFSP
+      price: ~$300+
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/le-creuset-5-5-qt-dutch-oven.jpg
+    - name: Cuisinart Chef's Classic Casserole
+      asin: B0007Y3ZDG
+      price: ~$70
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/cuisinart-dutch-oven.jpg
+    - name: Tramontina 6.5-Qt Dutch Oven
+      asin: B07PPM7TYB
+      price: ~$75
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/tramontina-dutch-oven.jpg
   proofing_baskets:
-    title: "Proofing Baskets (Bannetons)"
-    description: "Support for final rise, beautiful spiral pattern."
+    title: Proofing Baskets
+    description: Support for the final rise, creates a beautiful crust pattern.
     products:
-      - name: "WERTIOO Banneton Set"
-        asin: "B078TBQZPX"
-        price: "~$25 for complete set"
-        specs:
-          - "Includes: 9\" round, 10\" oval baskets"
-          - "Material: Natural rattan"
-          - "Accessories: Liners, scraper, lame"
-          - "Price: ~$25 for complete set"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: WERTIOO Banneton Set
+      asin: B078TBQZPX
+      price: ~$25
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/wertioo-banneton-set.jpg
+    - name: Frieling Oval Proofing Basket
+      asin: B000VKFLCC
+      price: ~$20
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/frieling-oval-proofing-basket.jpg
+    - name: Dotted Line Round Banneton 9-inch
+      asin: B07BG8HBMB
+      price: ~$18
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/dotted-line-banneton.jpg
+    - name: Brotform Oval Proofing Basket with Liner
+      asin: B00B5YJDUK
+      price: ~$30
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/brotform-oval-basket.jpg
+  baking_mats:
+    title: Baking Mats & Liners
+    description: Non-stick surface, even browning, reusable.
+    products:
+    - name: Silpat Premium Non-Stick Silicone Baking Mat
+      asin: B00008T960
+      price: ~$25
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/silpat-premium-non-stick-silicone-baking-mat.jpg
+    - name: AmazonBasics Silicone Baking Mat (2-Pack)
+      asin: B00KBZL3LO
+      price: ~$12
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/amazon-basics-silicone-mat.jpg
+    - name: Reynolds Kitchens Parchment Paper Roll
+      asin: B001PQMJOM
+      price: ~$8
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/reynolds-parchment-paper.jpg
   bread_lames:
-    title: "Bread Lame - Scoring Made Simple"
-    description: "Clean, controlled cuts for oven spring."
+    title: Bread Lames
+    description: Clean, controlled cuts for oven spring.
     products:
-      - name: "Emile Henry Bread Lame"
-        asin: "B07L5QQ7N8"
-        price: "~$20"
-        specs:
-          - "Replaceable razor blades"
-          - "Comfortable ceramic handle"
-          - "~$20"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
-      - name: "Double-Edge Razor Blades - DIY Alternative"
-        asin: "B004L4EING"
-        price: "Under $10"
-        specs:
-          - "Professional bakers' choice"
-          - "Snap in half for curved cuts"
-          - "Under $10 for 100 blades"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: Emile Henry Bread Lame
+      asin: B07L5QQ7N8
+      price: ~$20
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/emile-henry-bread-lame.jpg
+    - name: Double-Edge Razor Blades - DIY Alternative
+      asin: B004L4EING
+      price: Under $10
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/double-edge-razor-blades-diy-alternative.jpg
+    - name: Bread Bosses Bread Lame Scoring Tool
+      asin: B07MCWL6YN
+      price: ~$15
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/bread-bosses-lame.jpg
+    - name: Wire Monkey Firesong Bread Lame
+      asin: B07TGMKNJH
+      price: ~$30
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/wire-monkey-lame.jpg
   dough_whisks:
-    title: "Dough Whisk - Better Than Spoons"
-    description: "Cuts through flour without overworking."
+    title: Dough Whisks
+    description: Cuts through flour without overworking.
     products:
-      - name: "Norpro Danish Dough Whisk"
-        asin: "B000CPOJ0S"
-        price: "~$15"
-        specs:
-          - "Traditional design"
-          - "Beechwood handle"
-          - "~$15"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: Norpro Danish Dough Whisk
+      asin: B000CPOJ0S
+      price: ~$15
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/norpro-danish-dough-whisk.jpg
+    - name: OXO Good Grips Danish Dough Whisk
+      asin: B07BVVFYX5
+      price: ~$12
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/oxo-dough-whisk.jpg
+    - name: Zulay Kitchen Danish Dough Whisk
+      asin: B07K8XGTBJ
+      price: ~$10
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/zulay-dough-whisk.jpg
+  rolling_pins:
+    title: Rolling Pins
+    description: Consistent thickness for flatbreads, crackers, and more.
+    products:
+    - name: J.K. Adams Maple French Rolling Pin
+      asin: B0000CFEXJ
+      price: ~$25
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/jk-adams-rolling-pin.jpg
+    - name: Joseph Joseph Adjustable Rolling Pin
+      asin: B003LNOPXW
+      price: ~$30
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/joseph-joseph-rolling-pin.jpg
+    - name: Fox Run Marble Rolling Pin
+      asin: B000RA22BU
+      price: ~$20
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/fox-run-marble-rolling-pin.jpg
+    - name: Ateco Straight Rolling Pin
+      asin: B0000DJUIS
+      price: ~$12
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/ateco-rolling-pin.jpg
   pretzel_essentials:
-    title: "Pretzel-Making Essentials"
-    description: "For the pretzel enthusiasts:"
+    title: Pretzel Essentials
+    description: Everything you need for authentic homemade soft pretzels.
     products:
-      - name: "Coarse Pretzel Salt"
-        asin: "B000H25HYY"
-        price: "~$8"
-        specs:
-          - "Authentic coarse grain"
-          - "Essential for proper pretzel flavor"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
-      - name: "Everything But The Bagel Seasoning"
-        asin: "B078JBQZPX"
-        price: "~$6"
-        specs:
-          - "Perfect for everything pretzels"
-          - "Sesame seeds, poppy seeds, garlic, onion, salt"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
-      - name: "Arm & Hammer Pure Baking Soda"
-        asin: "B000PYF8VM"
-        price: "~$3"
-        specs:
-          - "Food-grade lye alternative"
-          - "Safe for home use"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: Coarse Pretzel Salt
+      asin: B000H25HYY
+      price: ~$8
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/coarse-pretzel-salt.jpg
+    - name: Arm & Hammer Pure Baking Soda
+      asin: B000PYF8VM
+      price: ~$3
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/arm-hammer-pure-baking-soda.jpg
+    - name: King Arthur Soft Pretzel Making Kit
+      asin: B0D2147JTW
+      price: ~$6
+      personal_favorite: false
+      personal_experience: I bought this a few weeks ago — I've never had a bad experience
+        with King Arthur products.
+      image: /assets/images/products/king-arthur-soft-pretzel-making-kit.jpg
+    - name: Everything But The Bagel Seasoning
+      asin: B01MFABGLR
+      price: ~$6
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/everything-but-the-bagel-seasoning.jpg
+    - name: Anthony's Diastatic Dry Malt Powder
+      asin: B01N0I9YEQ
+      price: ~$12
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/anthonys-malt-powder.jpg
+    - name: King Arthur Bread Flour
+      asin: B0000CFEXN
+      price: ~$10
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/king-arthur-bread-flour.jpg
+    - name: Maldon Sea Salt Flakes
+      asin: B00017028M
+      price: ~$8
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/maldon-sea-salt-flakes.jpg
+    - name: Red Star Active Dry Yeast
+      asin: B0082B9JGG
+      price: ~$6
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/red-star-yeast.jpg
   pizza_steel:
-    title: "Pizza Steel - Better Than Stone"
-    description: "Faster heat transfer, doesn't crack."
+    title: Baking Steels & Stones
+    description: Faster heat transfer for a better crust on bread and pizza.
     products:
-      - name: "Dough-Joe Pizza Steel"
-        asin: "B073W61MK1"
-        price: "~$80"
-        specs:
-          - "Thickness: 1/4\" steel plate"
-          - "Size: 16\" x 14\""
-          - "Versatility: Pizza, bread, cookies"
-          - "Price: ~$80"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
+    - name: Dough-Joe Pizza Steel
+      asin: B073W61MK1
+      price: ~$80
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/dough-joe-pizza-steel.jpg
+    - name: Lodge Cast Iron Baking Pan
+      asin: B00008GKDM
+      price: ~$25
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/lodge-cast-iron-baking-pan.jpg
+    - name: Old Stone Oven Pizza Stone
+      asin: B0000E1HU8
+      price: ~$45
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/old-stone-pizza-stone.jpg
+    - name: NerdChef Steel Baking Stone
+      asin: B00FGRPXNA
+      price: ~$100
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/nerdchef-steel-stone.jpg
   essential_reading:
-    title: "Essential Reading"
-    description: "Knowledge is power."
+    title: Essential Reading
+    description: The books that changed how I bake.
     products:
-      - name: "The New Artisan Bread in Five Minutes a Day"
-        asin: "1250018285"
-        price: "~$18"
-        specs:
-          - "Topic: Master artisan bread techniques"
-          - "Features: Clear instructions, great photos"
-          - "Best for: Home bakers just starting out with little to no equipment"
-        personal_favorite: true
-        personal_experience: "This was my very first bread book and I still use it over 10 years later"
-    
-      - name: "Flour Water Salt Yeast by Ken Forkish"
-        asin: "160774273X"
-        price: "~$20"
-        specs:
-          - "Topic: Master artisan bread techniques"
-          - "Features: Clear instructions, great photos"
-          - "Best for: Home bakers wanting professional results"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
-      - name: "The Food Lab by J. Kenji López-Alt"
-        asin: "0393081087"
-        price: "~$25"
-        specs:
-          - "Topic: Food science and technique"
-          - "Features: Understand the \"why\" behind techniques"
-          - "Best for: Troubleshooting based on science"
-        personal_favorite: false
-        personal_experience: "Not personally tested"
-
-# Site configuration
-affiliate_tag: "kneadfulthing-20"
-base_amazon_url: "https://amazon.com/dp/"
+    - name: The New Artisan Bread in Five Minutes a Day
+      asin: '1250018285'
+      price: ~$18
+      personal_favorite: true
+      personal_experience: My very first bread book — still use it 10+ years later
+      image: /assets/images/products/the-new-artisan-bread-in-five-minutes-a-day.jpg
+    - name: Flour Water Salt Yeast by Ken Forkish
+      asin: 160774273X
+      price: ~$20
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/flour-water-salt-yeast-by-ken-forkish.jpg
+    - name: The Food Lab by J. Kenji López-Alt
+      asin: 0393081087
+      price: ~$25
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/the-food-lab-by-j-kenji-l-pez-alt.jpg
+    - name: The Bread Baker's Apprentice by Peter Reinhart
+      asin: '1607742616'
+      price: ~$22
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/bread-bakers-apprentice.jpg
+    - name: Tartine Bread by Chad Robertson
+      asin: 0811870413
+      price: ~$30
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/tartine-bread-by-chad-robertson.jpg
+    - name: The Perfect Loaf by Maurizio Leo
+      asin: 0593138422
+      price: ~$35
+      personal_favorite: false
+      personal_experience: Not personally tested
+      image: /assets/images/products/the-perfect-loaf.jpg
+affiliate_tag: kneadfulthing-20
+base_amazon_url: https://amazon.com/dp/
+sections:
+  must_haves:
+    id: must-haves
+    title: The Must-Haves
+    description: Start here. The tools that make the biggest difference.
+    categories: kitchen_scales,stand_mixers,bench_scrapers,mixing_bowls
+  precision:
+    id: precision
+    title: Precision Instruments
+    description: Temperature and measurement tools for consistent results.
+    categories: thermometers,oven_thermometers
+  baking:
+    id: baking
+    title: Baking Vessels
+    description: Pans, pots, baskets, and mats for every type of dough.
+    categories: loaf_pans,dutch_ovens,proofing_baskets,baking_mats
+  tools:
+    id: tools
+    title: Hand Tools
+    description: The small tools that make a big difference at the bench.
+    categories: bread_lames,dough_whisks,rolling_pins
+  specialty:
+    id: specialty
+    title: Pretzel Specialty
+    description: Ingredients and gear for homemade soft pretzels.
+    categories: pretzel_essentials,pizza_steel
+  reading:
+    id: reading
+    title: Essential Reading
+    description: The books that shaped how I think about dough.
+    categories: essential_reading
